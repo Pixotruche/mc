@@ -444,7 +444,7 @@ a:hover{  color: var(--text2-color)  }
 
 @font-face {
     font-family:"autopia";
-    src: url(font/Francesco-italic-Trial.otf);
+    src: url(font/Francesco-Italic-Trial.otf);
     font-style: normal;
     font-weight: 100;
 } 
