@@ -29,6 +29,7 @@
 
     <!-- _-_-_-_-_-_-_-_-_-_-_-_-COMMUN_-_-_-_-_-_-_-_-_-_-_-_- -->
     <!-- _-_-_-_-_-_-_-_-_-_-_-_-COMMUN_-_-_-_-_-_-_-_-_-_-_-_- -->
+    <!-- _-_-_-_-_-_-_-_-_-_-_-_-COMMUN_-_-_-_-_-_-_-_-_-_-_-_- -->
  
 
   <div id="followbox">
@@ -55,13 +56,10 @@
 </div>
 
 <div class="bot botleft">
-
   <div class="boutonbot"id="contact">
     <a class="contacta" href="https://www.instagram.com/empochait_humain/"><p>~> english</p></a>
   </div>
-  
 </div>
-
 
 <div class="bot botright">
   <div class="boutonbot"id="logo">
@@ -72,6 +70,7 @@
 
     <!-- _-_-_-_-_-_-_-_-_-_-_-_-DIFFERENT_-_-_-_-_-_-_-_-_-_-_-_- -->
     <!-- _-_-_-_-_-_-_-_-_-_-_-_-DIFFERENT_-_-_-_-_-_-_-_-_-_-_-_- -->
+    <!-- _-_-_-_-_-_-_-_-_-_-_-_-DIFFERENT_-_-_-_-_-_-_-_-_-_-_-_- --> 
 
 
      <!--choice_-_-_-_-_-_-_-_-_-_-_-_- -->
@@ -131,10 +130,6 @@
       <p class="projetsname2"id="g2">2019 <br>belle semaine</p>
       <p class="projetsname2"id="h2">2022 <br>bones</p>
       <p class="projetsname2"id="i2">2022 <br>crabes</p>
-
-
-
-
     </div>
   </div>
 </div>
@@ -142,7 +137,7 @@
       <!--shop-_-_-_-_-_-_-_-_-_-_-_- -->
 
 <div class="container shopcontainer" id="shopcontainer">
-  <span class="arrow" id="left-arrow">&lt;</span>
+  <div class="arrowbox"><span class="arrow" id="left-arrow">&lt;</span></div>
 
         <div class="colorBlock" id="blueBlock">
           <div class="video-container">
@@ -153,6 +148,7 @@
           </div>
           <div class="info">
             <p class="price">110 eur</p>
+            <p class="number">n 12</p>
             <p class="size"> size  41</p>
           </div>
         </div>
@@ -165,6 +161,7 @@
             </div>
             <div class="info">
               <p class="price">70 eur</p>
+              <p class="number">n 13</p>
               <p class="size"> size  49</p>
             </div>
         </div>
@@ -177,6 +174,7 @@
             </div>
             <div class="info">
               <p class="price">60 eur</p>
+              <p class="number">n 14</p>
               <p class="size"> size  48</p>
             </div>
         </div>
@@ -189,6 +187,7 @@
             </div>
             <div class="info">
               <p class="price">100 eur</p>
+              <p class="number">n 15</p>
               <p class="size"> size  52</p>
             </div>
         </div>
@@ -201,11 +200,12 @@
             </div>
             <div class="info">
               <p class="price">75 eur</p>
+              <p class="number">n 16</p>
               <p class="size"> size  50</p>
             </div>
         </div>
 
-  <span class="arrow" id="right-arrow">&gt;</span>
+        <div class="arrowbox"><span class="arrow" id="right-arrow">&gt;</span></div>
 
   <a class="order" href="https://ig.me/m/empochait_humain" target="_blank"><p> to order please contact @empochait_humain </p></a>
 
@@ -221,300 +221,290 @@
 
     <script>
 
-    //DIFFERENT-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- -->
-    //DIFFERENT-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- -->
 
-          //scroll double-_-_-_-_-_-_-_-_-_-_-_-_-_- -->
 
-const container = document.getElementById('bijouxcontainer');
 
-container.addEventListener('wheel', function(event) {
-  event.preventDefault();
-  
-  // Si le défilement est principalement horizontal, utiliser deltaX
-  if (Math.abs(event.deltaX) > Math.abs(event.deltaY)) {
-    container.scrollLeft += event.deltaX;
-  } else {
-    // Sinon, utiliser deltaY
-    container.scrollLeft += event.deltaY;
-  }
-});
+//COMMUN-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- -->
+//COMMUN-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- -->
+
+        //FOLLOWING INSECT-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- -->
+
+                    document.getElementById('logoa').addEventListener('click', function() {
+                document.getElementById('followbox').classList.toggle('hover');
+            });
+            document.getElementById('logoa').addEventListener('click', function() {
+                document.getElementById('logoa').classList.toggle('hover');
+            });
+            document.getElementById('logoa').addEventListener('click', function() {
+                document.getElementById('body').classList.toggle('hover');
+            });
+        
+
+
+                document.addEventListener('DOMContentLoaded', (event) => {
+            // const aSquare = document.getElementById('followa');
+            const bSquare = document.getElementById('followb');
+            const cSquare = document.getElementById('followc');
+            const dSquare = document.getElementById('followd');
+            const eSquare = document.getElementById('followe');
+            const fSquare = document.getElementById('followf');
+            const gSquare = document.getElementById('followg'); // Nouveau bloc
+
+            document.addEventListener('mousemove', (event) => {
+                const mouseX = event.clientX;
+                const mouseY = event.clientY;
+
+            // Calculate angle between each square and the mouse
+            // const angleA = Math.atan2(mouseY - aSquare.offsetTop, mouseX - aSquare.offsetLeft);
+            const angleB = Math.atan2(mouseY - bSquare.offsetTop, mouseX - bSquare.offsetLeft);
+            const angleC = Math.atan2(mouseY - cSquare.offsetTop, mouseX - cSquare.offsetLeft);
+            const angleD = Math.atan2(mouseY - dSquare.offsetTop, mouseX - dSquare.offsetLeft);
+            const angleE = Math.atan2(mouseY - eSquare.offsetTop, mouseX - eSquare.offsetLeft);
+            const angleF = Math.atan2(mouseY - fSquare.offsetTop, mouseX - fSquare.offsetLeft);
+            const angleG = Math.atan2(mouseY - gSquare.offsetTop, mouseX - gSquare.offsetLeft); // Nouvel angle
+
+            // Rotate squares to face the mouse
+            // aSquare.style.transform = `translate(-50%, -50%) rotate(${angleA}rad)`;
+            bSquare.style.transform = `translate(-50%, -50%) rotate(${angleB}rad)`;
+            cSquare.style.transform = `translate(-50%, -50%) rotate(${angleC}rad)`;
+            dSquare.style.transform = `translate(-50%, -50%) rotate(${angleD}rad)`;
+            eSquare.style.transform = `translate(-50%, -50%) rotate(${angleE}rad)`;
+            fSquare.style.transform = `translate(-50%, -50%) rotate(${angleF}rad)`;
+            gSquare.style.transform = `translate(-50%, -50%) rotate(${angleG}rad)`; // Nouvelle transformation
+            
+            // Position squares at the mouse position with different offsets
+            // aSquare.style.left = `${mouseX}px`;
+            // aSquare.style.top = `${mouseY}px`;
+            
+            const bOffsetX = Math.cos(angleB) * 15; // Ajuster l'offset pour un espacement de 7px
+            const bOffsetY = Math.sin(angleB) * 15; // Ajuster l'offset pour un espacement de 7px
+            bSquare.style.left = `${mouseX - bOffsetX}px`;
+            bSquare.style.top = `${mouseY - bOffsetY}px`;
+
+            const cOffsetX = Math.cos(angleC) * 25; // Ajuster l'offset pour un espacement de 7px
+            const cOffsetY = Math.sin(angleC) * 25; // Ajuster l'offset pour un espacement de 7px
+            cSquare.style.left = `${mouseX - cOffsetX}px`;
+            cSquare.style.top = `${mouseY - cOffsetY}px`;
+
+            const dOffsetX = Math.cos(angleD) * 35; // Ajuster l'offset pour un espacement de 7px
+            const dOffsetY = Math.sin(angleD) * 35; // Ajuster l'offset pour un espacement de 7px
+            dSquare.style.left = `${mouseX - dOffsetX}px`;
+            dSquare.style.top = `${mouseY - dOffsetY}px`;
+
+            const eOffsetX = Math.cos(angleE) * 45; // Ajuster l'offset pour un espacement de 7px
+            const eOffsetY = Math.sin(angleE) * 45; // Ajuster l'offset pour un espacement de 7px
+            eSquare.style.left = `${mouseX - eOffsetX}px`;
+            eSquare.style.top = `${mouseY - eOffsetY}px`;
+
+            const fOffsetX = Math.cos(angleF) * 55; // Ajuster l'offset pour un espacement de 7px
+            const fOffsetY = Math.sin(angleF) * 55; // Ajuster l'offset pour un espacement de 7px
+            fSquare.style.left = `${mouseX - fOffsetX}px`;
+            fSquare.style.top = `${mouseY - fOffsetY}px`;
+
+            const gOffsetX = Math.cos(angleG) * 65; // Ajuster l'offset pour un espacement de 7px
+            const gOffsetY = Math.sin(angleG) * 65; // Ajuster l'offset pour un espacement de 7px
+            gSquare.style.left = `${mouseX - gOffsetX}px`;
+            gSquare.style.top = `${mouseY - gOffsetY}px`;
+           });
+           });
+
+//DIFFERENT-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- -->
+//DIFFERENT-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- -->
+
+        //scroll double-_-_-_-_-_-_-_-_-_-_-_-_-_- -->
+
+            const container = document.getElementById('bijouxcontainer');
+
+            container.addEventListener('wheel', function(event) {
+              event.preventDefault();
+              
+              // Si le défilement est principalement horizontal, utiliser deltaX
+              if (Math.abs(event.deltaX) > Math.abs(event.deltaY)) {
+                container.scrollLeft += event.deltaX;
+              } else {
+                // Sinon, utiliser deltaY
+                container.scrollLeft += event.deltaY;
+              }
+            });
 
         //bouton-_-_-_-_-_-_-_-_-_-_-_-_-_- -->
 
 
-function projectsclick() {
+            function projectsclick() {
 
-    const projectscontainer = document.querySelector('.projectscontainer');
-    projectscontainer.classList.toggle('upprojects');
+                const projectscontainer = document.querySelector('.projectscontainer');
+                projectscontainer.classList.toggle('upprojects');
 
-    const projectsbleu = document.querySelector('.projects');
-    projectsbleu.classList.toggle('projectsbleu');
+                const projectsbleu = document.querySelector('.projects');
+                projectsbleu.classList.toggle('projectsbleu');
 
-    const uptop = document.querySelector('.top2');
-    uptop.classList.toggle('uptop');
+                const uptop = document.querySelector('.top2');
+                uptop.classList.toggle('uptop');
 
-    // cancel le click bijoux
+                // cancel le click bijoux
 
-    const bijouxcontainer = document.querySelector('.bijouxcontainer');
-    bijouxcontainer.classList.remove('upbijoux');
+                const bijouxcontainer = document.querySelector('.bijouxcontainer');
+                bijouxcontainer.classList.remove('upbijoux');
 
-    const bijouxbleu = document.querySelector('.bijoux');
-    bijouxbleu.classList.remove('bijouxbleu');
+                const bijouxbleu = document.querySelector('.bijoux');
+                bijouxbleu.classList.remove('bijouxbleu');
 
-    const uptop2 = document.querySelector('.top2');
-    uptop2.classList.remove('uptop2');
+                const uptop2 = document.querySelector('.top2');
+                uptop2.classList.remove('uptop2');
 
-   //  cancel le click shop
+                // cancel le click shop
 
-    const shopcontainer = document.querySelector('.shopcontainer');
-    shopcontainer.classList.remove('upshop');
+                const shopcontainer = document.querySelector('.shopcontainer');
+                shopcontainer.classList.remove('upshop');
 
-    const shopbleu = document.querySelector('.shop');
-    shopbleu.classList.remove('shopbleu');
+                const shopbleu = document.querySelector('.shop');
+                shopbleu.classList.remove('shopbleu');
 
-    const uptop3 = document.querySelector('.top2');
-    uptop3.classList.remove('uptop3');
-    
-}
+                const uptop3 = document.querySelector('.top2');
+                uptop3.classList.remove('uptop3');
+                
+            }
 
-function bijouxclick() {
+            function bijouxclick() {
 
-    const bijouxcontainer = document.querySelector('.bijouxcontainer');
-    bijouxcontainer.classList.toggle('upbijoux');
+                const bijouxcontainer = document.querySelector('.bijouxcontainer');
+                bijouxcontainer.classList.toggle('upbijoux');
 
-    const bijouxbleu = document.querySelector('.bijoux');
-    bijouxbleu.classList.toggle('bijouxbleu');
+                const bijouxbleu = document.querySelector('.bijoux');
+                bijouxbleu.classList.toggle('bijouxbleu');
 
-    const uptop2 = document.querySelector('.top2');
-    uptop2.classList.toggle('uptop2');
+                const uptop2 = document.querySelector('.top2');
+                uptop2.classList.toggle('uptop2');
 
 
-    // cancel le click projects
+                // cancel le click projects
 
-    const projectscontainer = document.querySelector('.projectscontainer');
-    projectscontainer.classList.remove('upprojects');
+                const projectscontainer = document.querySelector('.projectscontainer');
+                projectscontainer.classList.remove('upprojects');
 
-    const projectsbleu = document.querySelector('.projects');
-    projectsbleu.classList.remove('projectsbleu');
+                const projectsbleu = document.querySelector('.projects');
+                projectsbleu.classList.remove('projectsbleu');
 
-    const uptop = document.querySelector('.top2');
-    uptop.classList.remove('uptop');
+                const uptop = document.querySelector('.top2');
+                uptop.classList.remove('uptop');
 
-     //   cancel le click shop
+                //  cancel le click shop
 
-    const shopcontainer = document.querySelector('.shopcontainer');
-    shopcontainer.classList.remove('upshop');
+                const shopcontainer = document.querySelector('.shopcontainer');
+                shopcontainer.classList.remove('upshop');
 
-    const shopbleu = document.querySelector('.shop');
-    shopbleu.classList.remove('shopbleu');
+                const shopbleu = document.querySelector('.shop');
+                shopbleu.classList.remove('shopbleu');
 
-    const uptop3 = document.querySelector('.top2');
-    uptop3.classList.remove('uptop3');
-}
+                const uptop3 = document.querySelector('.top2');
+                uptop3.classList.remove('uptop3');
+            }
 
-function shopclick() {
+            function shopclick() {
 
-    const shopcontainer = document.querySelector('.shopcontainer');
-    shopcontainer.classList.toggle('upshop');
+                const shopcontainer = document.querySelector('.shopcontainer');
+                shopcontainer.classList.toggle('upshop');
 
-    const shopbleu = document.querySelector('.shop');
-    shopbleu.classList.toggle('shopbleu');
+                const shopbleu = document.querySelector('.shop');
+                shopbleu.classList.toggle('shopbleu');
 
-    const uptop3 = document.querySelector('.top2');
-    uptop3.classList.toggle('uptop3');
+                const uptop3 = document.querySelector('.top2');
+                uptop3.classList.toggle('uptop3');
 
-    // cancel le click bijoux
+                // cancel le click bijoux
 
-    const bijouxcontainer = document.querySelector('.bijouxcontainer');
-    bijouxcontainer.classList.remove('upbijoux');
+                const bijouxcontainer = document.querySelector('.bijouxcontainer');
+                bijouxcontainer.classList.remove('upbijoux');
 
-    const bijouxbleu = document.querySelector('.bijoux');
-    bijouxbleu.classList.remove('bijouxbleu');
+                const bijouxbleu = document.querySelector('.bijoux');
+                bijouxbleu.classList.remove('bijouxbleu');
 
-    const uptop2 = document.querySelector('.top2');
-    uptop2.classList.remove('uptop2');
+                const uptop2 = document.querySelector('.top2');
+                uptop2.classList.remove('uptop2');
 
-    // cancel le click projects
+                // cancel le click projects
 
-    const projectscontainer = document.querySelector('.projectscontainer');
-    projectscontainer.classList.remove('upprojects');
+                const projectscontainer = document.querySelector('.projectscontainer');
+                projectscontainer.classList.remove('upprojects');
 
-    const projectsbleu = document.querySelector('.projects');
-    projectsbleu.classList.remove('projectsbleu');
+                const projectsbleu = document.querySelector('.projects');
+                projectsbleu.classList.remove('projectsbleu');
 
-    const uptop = document.querySelector('.top2');
-    uptop.classList.remove('uptop');
-}
-
-
-
-
-
-    //COMMUN-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- -->
-    //COMMUN-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- -->
-                //FOLLOW-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- -->
-
-        document.getElementById('logoa').addEventListener('click', function() {
-            document.getElementById('followbox').classList.toggle('hover');
-        });
-        document.getElementById('logoa').addEventListener('click', function() {
-            document.getElementById('logoa').classList.toggle('hover');
-        });
-        document.getElementById('logoa').addEventListener('click', function() {
-            document.getElementById('body').classList.toggle('hover');
-        });
-        
-
-
-        document.addEventListener('DOMContentLoaded', (event) => {
-    // const aSquare = document.getElementById('followa');
-    const bSquare = document.getElementById('followb');
-    const cSquare = document.getElementById('followc');
-    const dSquare = document.getElementById('followd');
-    const eSquare = document.getElementById('followe');
-    const fSquare = document.getElementById('followf');
-    const gSquare = document.getElementById('followg'); // Nouveau bloc
-
-    document.addEventListener('mousemove', (event) => {
-        const mouseX = event.clientX;
-        const mouseY = event.clientY;
+                const uptop = document.querySelector('.top2');
+                uptop.classList.remove('uptop');
+            }
 
-        // Calculate angle between each square and the mouse
-        // const angleA = Math.atan2(mouseY - aSquare.offsetTop, mouseX - aSquare.offsetLeft);
-        const angleB = Math.atan2(mouseY - bSquare.offsetTop, mouseX - bSquare.offsetLeft);
-        const angleC = Math.atan2(mouseY - cSquare.offsetTop, mouseX - cSquare.offsetLeft);
-        const angleD = Math.atan2(mouseY - dSquare.offsetTop, mouseX - dSquare.offsetLeft);
-        const angleE = Math.atan2(mouseY - eSquare.offsetTop, mouseX - eSquare.offsetLeft);
-        const angleF = Math.atan2(mouseY - fSquare.offsetTop, mouseX - fSquare.offsetLeft);
-        const angleG = Math.atan2(mouseY - gSquare.offsetTop, mouseX - gSquare.offsetLeft); // Nouvel angle
 
-        // Rotate squares to face the mouse
-        // aSquare.style.transform = `translate(-50%, -50%) rotate(${angleA}rad)`;
-        bSquare.style.transform = `translate(-50%, -50%) rotate(${angleB}rad)`;
-        cSquare.style.transform = `translate(-50%, -50%) rotate(${angleC}rad)`;
-        dSquare.style.transform = `translate(-50%, -50%) rotate(${angleD}rad)`;
-        eSquare.style.transform = `translate(-50%, -50%) rotate(${angleE}rad)`;
-        fSquare.style.transform = `translate(-50%, -50%) rotate(${angleF}rad)`;
-        gSquare.style.transform = `translate(-50%, -50%) rotate(${angleG}rad)`; // Nouvelle transformation
-        
-        // Position squares at the mouse position with different offsets
-        // aSquare.style.left = `${mouseX}px`;
-        // aSquare.style.top = `${mouseY}px`;
-        
-        const bOffsetX = Math.cos(angleB) * 15; // Ajuster l'offset pour un espacement de 7px
-        const bOffsetY = Math.sin(angleB) * 15; // Ajuster l'offset pour un espacement de 7px
-        bSquare.style.left = `${mouseX - bOffsetX}px`;
-        bSquare.style.top = `${mouseY - bOffsetY}px`;
+      //video auto-_-_-_-_-_-_-_-_-_-_-_-_-_- -->
 
-        const cOffsetX = Math.cos(angleC) * 25; // Ajuster l'offset pour un espacement de 7px
-        const cOffsetY = Math.sin(angleC) * 25; // Ajuster l'offset pour un espacement de 7px
-        cSquare.style.left = `${mouseX - cOffsetX}px`;
-        cSquare.style.top = `${mouseY - cOffsetY}px`;
 
-        const dOffsetX = Math.cos(angleD) * 35; // Ajuster l'offset pour un espacement de 7px
-        const dOffsetY = Math.sin(angleD) * 35; // Ajuster l'offset pour un espacement de 7px
-        dSquare.style.left = `${mouseX - dOffsetX}px`;
-        dSquare.style.top = `${mouseY - dOffsetY}px`;
+            // Sélectionner toutes les vidéos
+            const videos = document.querySelectorAll('.video');
 
-        const eOffsetX = Math.cos(angleE) * 45; // Ajuster l'offset pour un espacement de 7px
-        const eOffsetY = Math.sin(angleE) * 45; // Ajuster l'offset pour un espacement de 7px
-        eSquare.style.left = `${mouseX - eOffsetX}px`;
-        eSquare.style.top = `${mouseY - eOffsetY}px`;
+            // Fonction qui sera appelée lorsque chaque vidéo entre ou sort de la vue
+            function handleIntersection(entries, observer) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Si la vidéo est visible à l'écran, on la joue
+                        entry.target.play();
+                    } else {
+                        // Si la vidéo n'est pas visible à l'écran, on la met en pause
+                        entry.target.pause();
+                    }
+                });
+            }
 
-        const fOffsetX = Math.cos(angleF) * 55; // Ajuster l'offset pour un espacement de 7px
-        const fOffsetY = Math.sin(angleF) * 55; // Ajuster l'offset pour un espacement de 7px
-        fSquare.style.left = `${mouseX - fOffsetX}px`;
-        fSquare.style.top = `${mouseY - fOffsetY}px`;
+            // Créer un observer pour détecter l'intersection de chaque vidéo
+            const observer = new IntersectionObserver(handleIntersection, {
+                threshold: 0.5 // 50% de la vidéo doit être visible avant de commencer à jouer
+            });
 
-        const gOffsetX = Math.cos(angleG) * 65; // Ajuster l'offset pour un espacement de 7px
-        const gOffsetY = Math.sin(angleG) * 65; // Ajuster l'offset pour un espacement de 7px
-        gSquare.style.left = `${mouseX - gOffsetX}px`;
-        gSquare.style.top = `${mouseY - gOffsetY}px`;
-    });
-});
+            // Observer chaque vidéo
+            videos.forEach(video => {
+                observer.observe(video);
+            });
 
 
+      //carroussel-_-_-_-_-_-_-_-_-_-_-_-_-_- -->
 
 
+            // Récupérer toutes les divs de couleur
+            const colorBlocks = document.querySelectorAll('.colorBlock');
+            let currentIndex = 0;
 
+            // Fonction pour afficher la couleur sélectionnée
+            function changeColor(direction) {
+                // Cacher toutes les divs
+                colorBlocks.forEach(block => {
+                    block.style.display = 'none';
+                });
 
+                // Mettre à jour l'index
+                currentIndex += direction;
 
-    // Récupérer toutes les divs de couleur
-    const colorBlocks = document.querySelectorAll('.colorBlock');
-    let currentIndex = 0;
+                // Si on dépasse la dernière couleur, on revient à la première
+                if (currentIndex >= colorBlocks.length) {
+                    currentIndex = 0;
+                }
+                // Si on est avant la première couleur, on revient à la dernière
+                if (currentIndex < 0) {
+                    currentIndex = colorBlocks.length - 1;
+                }
 
-    // Fonction pour afficher la couleur sélectionnée
-    function changeColor(direction) {
-        // Cacher toutes les divs
-        colorBlocks.forEach(block => {
-            block.style.display = 'none';
-        });
+                // Afficher la div correspondant à l'index
+                colorBlocks[currentIndex].style.display = 'block';
+            }
 
-        // Mettre à jour l'index
-        currentIndex += direction;
+            // Afficher la première couleur au début
+            changeColor(0);
 
-        // Si on dépasse la dernière couleur, on revient à la première
-        if (currentIndex >= colorBlocks.length) {
-            currentIndex = 0;
-        }
-        // Si on est avant la première couleur, on revient à la dernière
-        if (currentIndex < 0) {
-            currentIndex = colorBlocks.length - 1;
-        }
+            // Événements pour les flèches
+            document.getElementById('left-arrow').addEventListener('click', () => changeColor(-1));
+            document.getElementById('right-arrow').addEventListener('click', () => changeColor(1));
 
-        // Afficher la div correspondant à l'index
-        colorBlocks[currentIndex].style.display = 'block';
-    }
 
-    // Afficher la première couleur au début
-    changeColor(0);
-
-    // Événements pour les flèches
-    document.getElementById('left-arrow').addEventListener('click', () => changeColor(-1));
-    document.getElementById('right-arrow').addEventListener('click', () => changeColor(1));
-
-
-
-
-
-
-
-
-
-
-// Sélectionner toutes les vidéos
-const videos = document.querySelectorAll('.video');
-
-// Fonction qui sera appelée lorsque chaque vidéo entre ou sort de la vue
-function handleIntersection(entries, observer) {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            // Si la vidéo est visible à l'écran, on la joue
-            entry.target.play();
-        } else {
-            // Si la vidéo n'est pas visible à l'écran, on la met en pause
-            entry.target.pause();
-        }
-    });
-}
-
-// Créer un observer pour détecter l'intersection de chaque vidéo
-const observer = new IntersectionObserver(handleIntersection, {
-    threshold: 0.5 // 50% de la vidéo doit être visible avant de commencer à jouer
-});
-
-// Observer chaque vidéo
-videos.forEach(video => {
-    observer.observe(video);
-});
-
-
- 
 
     </script>
-
-
 </html>
 
 

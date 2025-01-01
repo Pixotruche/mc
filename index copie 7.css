@@ -3,17 +3,16 @@
     padding: 0%;
     border: 0%;
     --main-color:  rgb(218, 218, 218);
+    --main-color2:  rgb(0, 0, 0);
     --text-color:  rgb(0, 0, 0);
     --text2-color: rgb(44, 40, 255);
     /* --text2-color: rgb(4, 0, 255); */
     
 }
 
-        a, a:hover, a:visited, a
-        {
+        a, a:hover, a:visited, a {
             color: var(--text-color);
             text-decoration:none;
-    
         }
         body{
             background-color:var(--main-color);
@@ -21,10 +20,11 @@
             overflow-y: hidden;
         }
 
-
 /* -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_ */
 /* -_-_-_-_-_-_-_-_-_-_-_-_-_-MENUS-_-_-_-_-_-_-_-_-_-_-_-_-_-_ */
-/* -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_ */
+/* -_-_-_-_-_-_-_-_-_-_-_-_-_-COMMUN_-_-_-_-_-_-_-_-_-_-_-_-_-_ */
+
+/* -_-_-_-_-_-_-_-_-_-_-_-_-_-TOP*/
         
         p{
             font-size: 2.2vh;
@@ -72,69 +72,25 @@
             font-family: "autopia2";
         }
         
-        .pseudo{
-            position: fixed;
-            right: -180px;
-            top: 40px;
-            transition: 300ms;
-        }
-        
-        #insta:hover .pseudo{
-            right: 20px;
-            transition: 300ms;
-        }
-        
-        
-                .top2{
+                .pseudo{
                     position: fixed;
-                    top: 50%;
-                    transform: translate(0%, -50%);
-                    height: 5vh;
-                    width: 100vw;
-                    display: flex;
-                    flex-direction:row;
-                    justify-content: center;
-                    z-index: 20;
-                    transition: 0.5s;
+                    right: -180px;
+                    top: 40px;
+                    transition: 300ms;
                 }
-                .categorie{
-                    position: relative;
-                    font-family: "autopia2";
-                    color:var(--text-color) ;
-                    margin: 1.2vh;
-                    cursor: pointer;
+                
+                #insta:hover .pseudo{
+                    right: 20px;
+                    transition: 300ms;
                 }
-                .projectsbleu{
-                    color:var(--text2-color) ;
-                }
-                .bijouxbleu{
-                    color:var(--text2-color) ;
-                }
-                .shopbleu{
-                    color:var(--text2-color) ;
-                }
-                .uptop {
-                    top: 6vh;
-                    transform: translate(0%, 0%);
-                    transition: 0.5s;
-                }
-                .uptop2 {
-                    top: 6vh;
-                    transform: translate(0%, 0%);
-                    transition: 0.5s;
-                }
-                .uptop3 {
-                    top: 6vh;
-                    transform: translate(0%, 0%);
-                    transition: 0.5s;
-                }
-
+        
+/* -_-_-_-_-_-_-_-_-_-_-_-_-_-BOT*/
                     
         .bot{
             position: fixed;
             bottom: 0;
             height: 8vh;
-            width: 20vw;
+            width: 20vh;
             z-index: 30;
             display: flex;
             flex-direction: column;
@@ -165,31 +121,81 @@
             font-family: "autopia2";
             cursor: pointer;
         }
-        #followbox{
-            opacity: 0;
-        }
-        #followbox.hover{
-            opacity: 1;
-        }
-        #logoa.hover{
-            opacity: 0;
-        }
-        
-        .follow{
-            width: 20px;
-            height: 20px;
-            position: fixed;
-            text-align: center;
-            line-height: 20px;
-            transition: transform 0.2s ease; /* Ajout de la transition */
-            white-space: nowrap; /* Empêcher le saut de ligne */
-        color: var(--text-color);
-            z-index: 100;
-        
-            font-family: "autopia2";
-        }
+                #followbox{
+                    opacity: 0;
+                }
+                #followbox.hover{
+                    opacity: 1;
+                }
+                #logoa.hover{
+                    opacity: 0;
+                }
+                
+                .follow{
+                    width: 20px;
+                    height: 20px;
+                    position: fixed;
+                    text-align: center;
+                    line-height: 20px;
+                    transition: transform 0.2s ease; /* Ajout de la transition */
+                    white-space: nowrap; /* Empêcher le saut de ligne */
+                color: var(--text-color);
+                    z-index: 100;
+                
+                    font-family: "autopia2";
+                }
         
         a:hover{  color: var(--text2-color)  }
+
+
+/* -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_ */
+/* -_-_-_-_-_-_-_-_-_-_-_-_-_-CHOIX_-_-_-_-_-_-_-_-_-_-_-_-_-_- */
+/* -_-_-_-_-_-_-_-_-_-_-_-_-_-DIFFERENT_-__-_-_-_-_-_-_-_-_-_-_ */
+
+
+        .top2{
+            position: fixed;
+            top: 50%;
+            transform: translate(0%, -50%);
+            height: 5vh;
+            width: 100vw;
+            display: flex;
+            flex-direction:row;
+            justify-content: center;
+            z-index: 20;
+            transition: 0.5s;
+        }
+        .categorie{
+            position: relative;
+            font-family: "autopia2";
+            color:var(--text-color) ;
+            margin: 1.2vh;
+            cursor: pointer;
+        }
+        .projectsbleu{
+            color:var(--text2-color) ;
+        }
+        .bijouxbleu{
+            color:var(--text2-color) ;
+        }
+        .shopbleu{
+            color:var(--text2-color) ;
+        }
+        .uptop {
+            top: 6vh;
+            transform: translate(0%, 0%);
+            transition: 0.5s;
+        }
+        .uptop2 {
+            top: 6vh;
+            transform: translate(0%, 0%);
+            transition: 0.5s;
+        }
+        .uptop3 {
+            top: 6vh;
+            transform: translate(0%, 0%);
+            transition: 0.5s;
+        }
 
 
 
@@ -218,6 +224,7 @@
 /* -_-_-_-_-_-_-_-_-_-_-_-_-_-PROJETS_-_-_-_-_-_-_-_-_-_-_-_-_- */
 /* -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_ */
 
+
 .projectscontainer {
     position: absolute;
     top: 100vh;
@@ -229,13 +236,10 @@
 z-index: 10;
 transition: 0.7s;
 }
-.upprojects{
+.upprojects {
     top: 0%;
     transition: 0.7s;
 }
-
-
-
 
 .imgprojets{
     position: relative;
@@ -295,6 +299,7 @@ font-family: "autopia";
 #imgf:hover ~ #f {  opacity: 1;  }
 #imgg:hover ~ #g {  opacity: 1;  }
 #imgh:hover ~ #h {  opacity: 1;  }
+
 /* -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_ */
 /* -_-_-_-_-_-_-_-_-_-_-_-_-_-_-SHOP-_-_-_-_-_-_-_-_-_-_-_-_-_- */
 /* -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_ */
@@ -311,6 +316,7 @@ font-family: "autopia";
     scrollbar-width: none; 
 
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
   }
@@ -318,79 +324,85 @@ font-family: "autopia";
   .upshop{
     top: 0%;
     transition: 0.7s;
+  }
+
+
+  .arrowbox{
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 2;
 }
-
-
 /* Flèches */
 .arrow {
-    font-size: 30px;
+    font-size: 4vh;
     cursor: pointer;
-    margin: 10vw;
     color: #333;
 }
 
 /* Style pour chaque bloc de couleur */
 .colorBlock {
-    width: 40vh;
-    height: 55vh;
-    margin: 0 20px;
+    width: 60vh;
+    height: 45vh;
     transition: background-color 0.3s ease;
 }
 
-/* Liste des couleurs */
-#blueBlock { background-color: blue; }
-#redBlock { background-color: red; }
-#yellowBlock { background-color: yellow; }
-#orangeBlock { background-color: orange; }
-#violetBlock { background-color: violet; }
-
-
-.order {
-        position: absolute;
-        bottom: 1.2vh;
-        left: 50vw;
-        transform: translate(-50%,-50%);
-        text-align: center;
-        color: var(--text2-color);
-        font-family: "autopia";
-}
 
 .video-container {
     position: relative;
     width: 100%;
     height: 100%;
     overflow: hidden;
-    
 }
 
 /* Vidéo sans contrôle, qui s'adapte à la taille de l'écran */
 .video {
-    width: 100%;
+    position: relative;
     height: 100%;
-    object-fit: cover; /* La vidéo s'ajuste pour couvrir tout le conteneur sans déformation */
+    width: auto;
+    right: 18%;
+    /* object-fit: cover; La vidéo s'ajuste pour couvrir tout le conteneur sans déformation */
     overflow: hidden;
+    transform: rotate(0deg);
 
 }
 
 .info{ 
     position: relative; 
     width: 100%;
-    height: 5vh;
+    height: 7vh;
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
 }
 
-.price{ 
+        .price{         
+            font-family: "autopia";
+            font-size: 2vh;
+            margin-left: 5%;          
+        }
+        .number{ 
+            position: absolute;
+            top: 50%; left: 50%; 
+            transform: translate(-50%, -50%);
+            font-family: "autopia";
+            font-size: 2vh;
+        }
+        .size{ 
+            font-family: "autopia";
+            font-size: 2vh;
+            margin-right: 5%;
+        }
+
+.order {
     position: absolute;
-    bottom: 0px;  /* Positionner en bas */
-    left: 0px;    /* Positionner à gauche */
-    font-family: "autopia";
-}
-.size{ 
-    position: absolute;
-    bottom: 0px;  /* Positionner en bas */
-    right: 0px;   /* Positionner à droite */
+    bottom: 1.2vh;
+    left: 50vw;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color: var(--text2-color);
     font-family: "autopia";
 }
 
@@ -488,10 +500,38 @@ font-family: "autopia";
         --main-color:  rgb(219, 6, 6);       
     }
      */
-
-     #titre{
-        font-size: 4.7vw;
+     .colorBlock {
+        width: 40vh;
+        height: 55vh;
+        scale: 0.9;
+        transition: background-color 0.3s ease;
     }
+
+    .video {
+        width: 200%;
+        height: auto;
+        left: -50%;
+        top: 5%;
+        overflow: hidden;
+        transform: rotate(90deg);
+    }
+    p{
+        font-size: 4.5vw;
+    }
+     #titre{
+        font-size: 8vw;
+    }
+
+    .price{ 
+        font-size: 4vw;
+    }
+    .number{ 
+        font-size: 4vw;
+    }
+    .size{ 
+        font-size: 4vw;
+    }
+
 }
 
 
@@ -510,18 +550,7 @@ font-family: "autopia";
     font-weight: 100;
 }
 
-/* @font-face {
-    font-family:"autopia";
-    src: url(font/EBGaramond-0.016/ttf/EBGaramond12-Regular.ttf);
-    font-style: normal;
-    font-weight: 100;}
 
-    @font-face {
-        font-family:"autopia2";
-        src: url(font/EBGaramond-0.016/ttf/EBGaramond12-Regular.ttf);
-        font-style: normal;
-        font-weight: 100;
-    } */
 
 
 
