@@ -74,7 +74,7 @@
         
                 .pseudo{
                     position: fixed;
-                    right: -180px;
+                    right: -300px;
                     top: 40px;
                     transition: 300ms;
                 }
@@ -396,12 +396,14 @@ font-family: "autopia";
             margin-right: 5%;
         }
 
+
 .order {
     position: absolute;
-    bottom: 1.2vh;
-    left: 50vw;
-    transform: translate(-50%,-50%);
+    bottom: 3vh;
+    background-color: blue;
     text-align: center;
+    max-width: 50%;  /* Pour éviter que le texte soit trop large */
+     word-wrap: break-word; /* Permet au texte de passer à la ligne si nécessaire */
     color: var(--text2-color);
     font-family: "autopia";
 }
@@ -518,6 +520,9 @@ font-family: "autopia";
     p{
         font-size: 4.5vw;
     }
+    a{ 
+        font-size: 4vw;
+    }
      #titre{
         font-size: 8vw;
     }
@@ -531,6 +536,7 @@ font-family: "autopia";
     .size{ 
         font-size: 4vw;
     }
+
 
 }
 
