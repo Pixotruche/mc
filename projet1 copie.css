@@ -16,6 +16,7 @@
         }
         body{
             background-color:var(--main-color);
+            overflow-x: hidden;
         }
 
 /* -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_ */
