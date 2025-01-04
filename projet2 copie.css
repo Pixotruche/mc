@@ -387,7 +387,7 @@ min-height: 4vh;
         text-align: center;
     }
 
-    #chapo{  display: flex; width: 20%; grid-column: span 2 / span 2;  aspect-ratio: 10 / 12;}
+    #chapo{  display: flex; width: 20vw; grid-column: span 2 / span 2;  aspect-ratio: 10 / 12;}
     #imagechapo{   width: 100%; position: absolute; left: 50%; top: 0%;  transform: translate(-50%);  }
 
     #abis{  grid-column: span 2 / span 2;  aspect-ratio: 10 / 12;}
