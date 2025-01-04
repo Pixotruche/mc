@@ -7,6 +7,7 @@
     --text-color:  rgb(0, 0, 0);
     --text2-color: rgb(44, 40, 255);
     /* --text2-color: rgb(4, 0, 255); */
+    outline: 1px solid red;
     
 }
 
@@ -387,8 +388,8 @@ min-height: 4vh;
         text-align: center;
     }
 
-    #chapo{  display: flex; width: 20vw; grid-column: span 2 / span 2;  aspect-ratio: 10 / 12;}
-    #imagechapo{   width: 100%; position: absolute; left: 50%; top: 0%;  transform: translate(-50%);  }
+    #chapo{ display: flex; height: 12vh; grid-column: span 2 / span 2;  aspect-ratio: 10 / 12; justify-content: center;}
+    #imagechapo{   width: 100%;  }
 
     #abis{  grid-column: span 2 / span 2;  aspect-ratio: 10 / 12;}
     #imageabis{   width: 90%; position: absolute; left: 50%; top: 8%;  transform: translate(-50%);  }
