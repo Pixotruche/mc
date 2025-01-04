@@ -2,207 +2,168 @@
     margin: 0%;
     padding: 0%;
     border: 0%;
-    --main-color:  rgb(0, 0, 0);
+    --main-color:   rgb(0, 0, 0);
+    --main-color2: rgb(218, 218, 218);
     --text-color:  rgb(218, 218, 218);
     --text2-color: rgb(44, 40, 255);
     /* --text2-color: rgb(4, 0, 255); */
     
 }
 
-        a, a:hover, a:visited, a
-        {
+        a, a:hover, a:visited, a {
             color: var(--text-color);
             text-decoration:none;
         }
         body{
             background-color:var(--main-color);
-            overflow-x: hidden;
         }
-
 
 /* -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_ */
 /* -_-_-_-_-_-_-_-_-_-_-_-_-_-MENUS-_-_-_-_-_-_-_-_-_-_-_-_-_-_ */
-/* -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_ */
+/* -_-_-_-_-_-_-_-_-_-_-_-_-_-COMMUN_-_-_-_-_-_-_-_-_-_-_-_-_-_ */
+
+/* -_-_-_-_-_-_-_-_-_-_-_-_-_-TOP*/
         
-p{
-    font-size: 2.2vh;
-}
-#titre{
-    font-size: 4vh;
-}
-
-.top{
-    position: fixed;
-    top: 0;
-    height: 8vh;
-    width: 100vw;
-    display: flex;
-    flex-direction:row;
-    justify-content:space-between;
-    z-index: 20;
-}
-
-.boutontop{
-    display: flex;
-    align-items: center;
-}
-
-#nom {
-    position: absolute;
-    top: 50%; left: 50%; 
-    transform: translate(-50%, -50%);
-    font-family: "autopia";
-    color:var(--text-color) ;
-
-}
-
-#about{
-    position: relative;
-    left: 20px;
-    color:var(--text-color);
-    font-family: "autopia2";
-}
-
-#insta{
-    position: relative;
-    right: 20px;
-    color:var(--text-color);
-    font-family: "autopia2";
-}
-
-.pseudo{
-    position: fixed;
-    right: -180px;
-    top: 40px;
-    transition: 300ms;
-}
-
-#insta:hover .pseudo{
-    right: 20px;
-    transition: 300ms;
-}
-
-
-        .top2{
+        p{
+            font-size: 2.2vh;
+        }
+        #titre{
+            font-size: 4vh;
+        }
+        
+        .top{
             position: fixed;
-            top: 50%;
-            transform: translate(0%, -50%);
-            height: 5vh;
+            top: 0;
+            height: 8vh;
             width: 100vw;
             display: flex;
             flex-direction:row;
-            justify-content: center;
+            justify-content:space-between;
             z-index: 20;
-            transition: 0.5s;
         }
-        .categorie{
-            position: relative;
-            font-family: "autopia2";
+        
+        .boutontop{
+            display: flex;
+            align-items: center;
+        }
+        
+        #nom {
+            position: absolute;
+            top: 50%; left: 50%; 
+            transform: translate(-50%, -50%);
+            font-family: "autopia";
             color:var(--text-color) ;
-            margin: 1.2vh;
+        
+        }
+        
+        #about{
+            position: relative;
+            left: 20px;
+            color:var(--text-color);
+            font-family: "autopia2";
+        }
+        
+        #insta{
+            position: relative;
+            right: 20px;
+            color:var(--text-color);
+            font-family: "autopia2";
+        }
+        
+                .pseudo{
+                    position: fixed;
+                    right: -300px;
+                    top: 40px;
+                    transition: 300ms;
+                }
+                
+                #insta:hover .pseudo{
+                    right: 20px;
+                    transition: 300ms;
+                }
+        
+/* -_-_-_-_-_-_-_-_-_-_-_-_-_-BOT*/
+                    
+        .bot{
+            position: fixed;
+            bottom: 0;
+            height: 8vh;
+            width: 20vh;
+            z-index: 30;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+        }    
+                .botleft{
+                    left: 0px;
+                    align-items: start;
+                }
+                .botright{
+                    right: 0px;
+                    align-items: end;
+                }
+        
+        #contact{
+            position: relative;
+            left: 20px;
+            color:var(--text-color);
+            font-family: "autopia2";
+            z-index: 30;
+        }
+        
+        #logo{
+            position: relative;
+            right: 20px;
+            color:var(--text-color);
+            font-family: "autopia2";
             cursor: pointer;
         }
-        .projectsbleu{
-            color:var(--text2-color) ;
+                #followbox{
+                    opacity: 0;
+                }
+                #followbox.hover{
+                    opacity: 1;
+                }
+                #logoa.hover{
+                    opacity: 0;
+                }
+                
+                .follow{
+                    width: 20px;
+                    height: 20px;
+                    position: fixed;
+                    text-align: center;
+                    line-height: 20px;
+                    transition: transform 0.2s ease; /* Ajout de la transition */
+                    white-space: nowrap; /* Empêcher le saut de ligne */
+                color: var(--text-color);
+                    z-index: 100;
+                
+                    font-family: "autopia2";
+                }
+        
+        a:hover{  color: var(--text2-color)  }
+
+
+
+
+
+        @media (max-width: 600px) {
+
+
+            p{
+                font-size: 4.5vw;
+            }
+            a{ 
+                font-size: 4vw;
+            }
+             #titre{
+                font-size: 8vw;
+            }
+    
+        
         }
-        .bijouxbleu{
-            color:var(--text2-color) ;
-        }
-        .uptop {
-            top: 6vh;
-            transform: translate(0%, 0%);
-            transition: 0.5s;
-        }
-        .uptop2 {
-            top: 6vh;
-            transform: translate(0%, 0%);
-            transition: 0.5s;
-        }
-
-            
-
-
-.bot{
-    position: fixed;
-    bottom: 0;
-    height: 8vh;
-    width: 100vw;
-    display: flex;
-    flex-direction:row;
-    justify-content: space-between;
-    z-index: 30;
-}
-
-.boutonbot{
-    display: flex;
-    align-items: center;
-}
-
-
-#contact{
-    position: relative;
-    left: 20px;
-    color:var(--text-color);
-    font-family: "autopia2";
-    z-index: 30;
-}
-
-#logo{
-    position: relative;
-    right: 20px;
-    color:var(--text-color);
-    font-family: "autopia2";
-    cursor: pointer;
-}
-#followbox{
-    opacity: 0;
-}
-#followbox.hover{
-    opacity: 1;
-}
-#logoa.hover{
-    opacity: 0;
-}
-
-.follow{
-    width: 20px;
-    height: 20px;
-    position: fixed;
-    text-align: center;
-    line-height: 20px;
-    transition: transform 0.2s ease; /* Ajout de la transition */
-    white-space: nowrap; /* Empêcher le saut de ligne */
-color: var(--text-color);
-    z-index: 100;
-
-    font-family: "autopia2";
-}
-
-a:hover{  color: var(--text2-color)  }
-
-
-
-@media (max-width: 600px) {
-
-    #titre{
-        text-align: center;
-        font-size: 5.8vw
-    }
-    p{
-        font-size: 3vw;
-    }
-}
-
-@media (min-width: 600px) and (max-width: 1000px) {
-
-    p{
-        font-size: 2.2vh;
-    }
-    #titre{
-        font-size: 4vh;
-    }
-}
-
 
 /* -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_ */
 /* -_-_-_-_-_-_-_-_-_-_-_-_PROJET_-COMMUN-_-_-_-_-_-_-_-_-_-_-_ */
@@ -369,12 +330,12 @@ a:hover{  color: var(--text2-color)  }
     }
     .titreprojet{
         text-align: center;
-        font-size: 7vw;
+        font-size: 9vw;
         margin: 0%;
         margin-bottom: 5%;
     }
     .text{
-        font-size: 2.2vw;
+        font-size: 3vw;
         text-align: center;
         margin-left: 13%;
         margin-right: 13%;
@@ -422,7 +383,7 @@ a:hover{  color: var(--text2-color)  }
         }
     
         .text{
-            font-size: 1.6vh;
+            font-size: 3vh;
             text-align: center;
             margin-left: 13%;
             margin-right: 13%;
@@ -457,17 +418,3 @@ a:hover{  color: var(--text2-color)  }
     font-weight: 100;
 }
 
-
-/* @font-face {
-    font-family:"autopia";
-    src: url(font/Autopia-Italic.otf);
-    font-style: normal;
-    font-weight: 100;
-}
-
-@font-face {
-    font-family:"autopia2";
-    src: url(font/Autopia-Regular.otf);
-    font-style: normal;
-    font-weight: 100;
-} */
