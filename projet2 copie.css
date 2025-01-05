@@ -528,6 +528,14 @@ min-height: 4vh;
     font-weight: 100;
 }
 
+@font-face {
+    font-family:"typo3";
+    src: url(font/EBGaramond12-Regular.ttf);
+    font-style: normal;
+    font-weight: 100;
+} 
+
+
 
 /* @font-face {
     font-family:"autopia";

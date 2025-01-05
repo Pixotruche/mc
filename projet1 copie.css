@@ -52,7 +52,7 @@
             position: absolute;
             top: 50%; left: 50%; 
             transform: translate(-50%, -50%);
-            font-family: "autopia";
+            font-family: "autopia","typo3";
             color:var(--text-color) ;
         
         }
@@ -61,14 +61,14 @@
             position: relative;
             left: 20px;
             color:var(--text-color);
-            font-family: "autopia2";
+            font-family: "autopia2","typo3";
         }
         
         #insta{
             position: relative;
             right: 20px;
             color:var(--text-color);
-            font-family: "autopia2";
+            font-family: "autopia2","typo3";
         }
         
                 .pseudo{
@@ -109,7 +109,7 @@
             position: relative;
             left: 20px;
             color:var(--text-color);
-            font-family: "autopia2";
+            font-family: "autopia2","typo3";
             z-index: 30;
         }
         
@@ -117,7 +117,7 @@
             position: relative;
             right: 20px;
             color:var(--text-color);
-            font-family: "autopia2";
+            font-family: "autopia2","typo3";
             cursor: pointer;
         }
                 #followbox{
@@ -141,7 +141,7 @@
                 color: var(--text-color);
                     z-index: 100;
                 
-                    font-family: "autopia2";
+                    font-family: "autopia2","typo3";
                 }
         
         a:hover{  color: var(--text2-color)  }
@@ -197,7 +197,7 @@
 
     .titreprojet{
         font-size: 6vh;
-        font-family: "autopia2";
+        font-family: "autopia2", "typo3";
         color:  var(--text-color);
         margin: 20px;
         margin-left: 8vh;
@@ -214,7 +214,7 @@
     .text{
         font-size: 1.8vh;
         color:  var(--text-color);
-        font-family: "autopia2";
+        font-family: "autopia2","typo3";
         margin: 8vh;
         margin-right: 0vh;
         margin-top: 0%;
@@ -303,7 +303,7 @@
     position: relative;
     transform: translate(-25%,0%);
     left: 50%;
-    width: 98%;
+    width: 92%;
 }
 
 
@@ -418,4 +418,11 @@
     font-style: normal;
     font-weight: 100;
 }
+
+@font-face {
+    font-family:"typo3";
+    src: url(font/EBGaramond12-Regular.ttf);
+    font-style: normal;
+    font-weight: 100;
+} 
 

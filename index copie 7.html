@@ -85,14 +85,14 @@
       <!--project-_-_-_-_-_-_-_-_-_-_-_- -->
 
 <div class="container projectscontainer">
-  <a class="imgprojets" id="imga" href="projet1.html"><img class="miniature" src="image2/1.jpg" alt=""></a>
-  <a class="imgprojets" id="imgb" href="projet2 copie.html"><img class="miniature" src="image2/chapo2.jpg" alt=""></a>
-  <a class="imgprojets" id="imgc" href="projet1.html"><img class="miniature" src="image2/3.jpg" alt=""></a>
-  <a class="imgprojets" id="imgd" href="projet1.html"><img class="miniature" src="image2/4.jpg" alt=""></a>
-  <a class="imgprojets" id="imge" href="projet1.html"><img class="miniature" src="image2/5.jpg" alt=""></a>
-  <a class="imgprojets" id="imgf" href="projet1.html"><img class="miniature" src="image2/8.jpg" alt=""></a>
-  <a class="imgprojets" id="imgg" href="projet1.html"><img class="miniature" src="image2/7.jpg" alt=""></a>
-  <a class="imgprojets" id="imgh" href="projet1 copie.html"><img class="miniature" src="image2/10.png" alt=""></a>
+  <a class="imgprojets" id="imga" href="projet1.html"><img class="miniature" src="image2/minia/1.jpg" alt=""></a>
+  <a class="imgprojets" id="imgb" href="projet2 copie.html"><img class="miniature" src="image2/minia/chapo2.jpg" alt=""></a>
+  <a class="imgprojets" id="imgc" href="projet1.html"><img class="miniature" src="image2/minia/3.jpg" alt=""></a>
+  <a class="imgprojets" id="imgd" href="projet1.html"><img class="miniature" src="image2/minia/4.jpg" alt=""></a>
+  <a class="imgprojets" id="imge" href="projet1.html"><img class="miniature" src="image2/minia/5.jpg" alt=""></a>
+  <a class="imgprojets" id="imgf" href="projet1.html"><img class="miniature" src="image2/minia/8.jpg" alt=""></a>
+  <a class="imgprojets" id="imgg" href="projet1.html"><img class="miniature" src="image2/minia/7.jpg" alt=""></a>
+  <a class="imgprojets" id="imgh" href="projet1 copie.html"><img class="miniature" src="image2/minia/10.png" alt=""></a>
 
 
   <p class="projetsname" id="a">"un milliards de haineux <br> un milliards de groupies"</p></a>
@@ -110,7 +110,6 @@
 
 <div class="container bijouxcontainer" id="bijouxcontainer">
   <div class="scrollbijoux">
-    <div style="display: flex;">  
       <img class="carroussel" id="carroussela" src="image2/carroussel/_0028_ .jpg" alt="">
       <img class="carroussel" id="carroussela" src="image2/carroussel/_0027_ .jpg" alt="">
       <img class="carroussel" id="carroussela" src="image2/carroussel/_0026_ .jpg" alt="">
@@ -141,7 +140,7 @@
       <!-- <img class="carroussel" id="carroussela" src="image2/carroussel/_0002_ .jpg" alt="">
       <img class="carroussel" id="carroussela" src="image2/carroussel/_0001_ .jpg" alt=""> -->
       
-      <p class="projetsname2" id="a2">2022 <br> les verres</p></a>
+      <!-- <p class="projetsname2" id="a2">2022 <br> les verres</p></a>
       <p class="projetsname2"id="b2">2022  <BR>les dents</p>
       <p class="projetsname2"id="c2">2022 <br> love</p>
       <p class="projetsname2"id="d2">2023 <br>ruggero et valerio</p>
@@ -149,8 +148,7 @@
       <p class="projetsname2"id="f2">2023 <br>installations</p>
       <p class="projetsname2"id="g2">2019 <br>belle semaine</p>
       <p class="projetsname2"id="h2">2022 <br>bones</p>
-      <p class="projetsname2"id="i2">2022 <br>crabes</p>
-    </div>
+      <p class="projetsname2"id="i2">2022 <br>crabes</p> -->
   </div>
 </div>
 
@@ -333,19 +331,56 @@
 
         //scroll double-_-_-_-_-_-_-_-_-_-_-_-_-_- -->
 
-            const container = document.getElementById('bijouxcontainer');
+            // const container = document.getElementById('bijouxcontainer');
 
-            container.addEventListener('wheel', function(event) {
-              event.preventDefault();
+            // container.addEventListener('wheel', function(event) {
+            //   event.preventDefault();
               
-              // Si le défilement est principalement horizontal, utiliser deltaX
-              if (Math.abs(event.deltaX) > Math.abs(event.deltaY)) {
-                container.scrollLeft += event.deltaX;
-              } else {
-                // Sinon, utiliser deltaY
-                container.scrollLeft += event.deltaY;
-              }
-            });
+            //   // Si le défilement est principalement horizontal, utiliser deltaX
+            //   if (Math.abs(event.deltaX) > Math.abs(event.deltaY)) {
+            //     container.scrollLeft += event.deltaX;
+            //   } else {
+            //     // Sinon, utiliser deltaY
+            //     container.scrollLeft += event.deltaY;
+            //   }
+            // });
+
+                    const container = document.getElementById('bijouxcontainer');
+
+                    // Vérifier si l'écran est plus large que 600px
+                    const mediaQuery = window.matchMedia("(min-width: 601px)");
+
+                    // Fonction pour gérer le défilement uniquement sur les grands écrans
+                    function handleScroll(event) {
+                      if (mediaQuery.matches) {
+                        event.preventDefault();
+
+                        if (Math.abs(event.deltaX) > Math.abs(event.deltaY)) {
+                          container.scrollLeft += event.deltaX; // Défilement horizontal
+                        } else {
+                          container.scrollLeft += event.deltaY; // Défilement horizontal avec deltaY si deltaX est faible
+                        }
+                      }
+                    }
+
+                    // Ajouter ou supprimer l'écouteur d'événement en fonction de la taille de l'écran
+                    function updateScrollBehavior() {
+                      if (mediaQuery.matches) {
+                        // Si l'écran est large, ajouter l'écouteur
+                        console.log("Écran large : activation du défilement personnalisé.");
+                        container.addEventListener('wheel', handleScroll);
+                      } else {
+                        // Si l'écran est petit, supprimer l'écouteur
+                        console.log("Écran petit : désactivation du défilement personnalisé.");
+                        container.removeEventListener('wheel', handleScroll);
+                      }
+                    }
+
+                    // Initialiser le comportement au chargement
+                    updateScrollBehavior();
+
+                    // Surveiller les changements de taille d'écran
+                    mediaQuery.addEventListener('change', updateScrollBehavior);
 
         //bouton-_-_-_-_-_-_-_-_-_-_-_-_-_- -->
 

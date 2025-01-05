@@ -53,7 +53,7 @@
             position: absolute;
             top: 50%; left: 50%; 
             transform: translate(-50%, -50%);
-            font-family: "autopia";
+            font-family: "typo1";
             color:var(--text-color) ;
         
         }
@@ -62,14 +62,14 @@
             position: relative;
             left: 20px;
             color:var(--text-color);
-            font-family: "autopia2";
+            font-family: "typo2";
         }
         
         #insta{
             position: relative;
             right: 20px;
             color:var(--text-color);
-            font-family: "autopia2";
+            font-family: "typo2";
         }
         
                 .pseudo{
@@ -110,7 +110,7 @@
             position: relative;
             left: 20px;
             color:var(--text-color);
-            font-family: "autopia2";
+            font-family: "typo2";
             z-index: 30;
         }
         
@@ -118,7 +118,7 @@
             position: relative;
             right: 20px;
             color:var(--text-color);
-            font-family: "autopia2";
+            font-family: "typo2";
             cursor: pointer;
         }
                 #followbox{
@@ -142,7 +142,7 @@
                 color: var(--text-color);
                     z-index: 100;
                 
-                    font-family: "autopia2";
+                    font-family: "typo2";
                 }
         
         a:hover{  color: var(--text2-color)  }
@@ -152,8 +152,6 @@
 
 
         @media (max-width: 600px) {
-
-
             p{
                 font-size: 4.5vw;
             }
@@ -163,9 +161,8 @@
              #titre{
                 font-size: 8vw;
             }
-    
-        
         }
+
 /* -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_ */
 /* -_-_-_-_-_-_-_-_-_-_-_-_-_-CHOIX_-_-_-_-_-_-_-_-_-_-_-_-_-_- */
 /* -_-_-_-_-_-_-_-_-_-_-_-_-_-DIFFERENT_-__-_-_-_-_-_-_-_-_-_-_ */
@@ -185,7 +182,7 @@
         }
         .categorie{
             position: relative;
-            font-family: "autopia2";
+            font-family: "typo2";
             color:var(--text-color) ;
             margin: 1.2vh;
             cursor: pointer;
@@ -215,28 +212,6 @@
             transition: 0.5s;
         }
 
-
-
-        @media (max-width: 600px) {
-
-            #titre{
-                text-align: center;
-                font-size: 5.8vw
-            }
-            p{
-                font-size: 3vw;
-            }
-        }
-
-        @media (min-width: 600px) and (max-width: 1000px) {
-
-            p{
-                font-size: 2.2vh;
-            }
-            #titre{
-                font-size: 4vh;
-            }
-        }
 
 /* -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_ */
 /* -_-_-_-_-_-_-_-_-_-_-_-_-_-PROJETS_-_-_-_-_-_-_-_-_-_-_-_-_- */
@@ -304,7 +279,7 @@ height: 4vh;
 
     text-align: center;
     color: var(--text2-color);
-font-family: "autopia";
+font-family: "typo2";
     opacity: 0;
 
 }
@@ -396,7 +371,7 @@ font-family: "autopia";
 }
 
         .price{         
-            font-family: "autopia";
+            font-family: "typo1";
             font-size: 2vh;
             margin-left: 5%;          
         }
@@ -404,11 +379,11 @@ font-family: "autopia";
             position: absolute;
             top: 50%; left: 50%; 
             transform: translate(-50%, -50%);
-            font-family: "autopia";
+            font-family: "typo1";
             font-size: 2vh;
         }
         .size{ 
-            font-family: "autopia";
+            font-family: "typo1";
             font-size: 2vh;
             margin-right: 5%;
         }
@@ -421,9 +396,34 @@ font-family: "autopia";
     max-width: 50%;  /* Pour éviter que le texte soit trop large */
      word-wrap: break-word; /* Permet au texte de passer à la ligne si nécessaire */
     color: var(--text2-color);
-    font-family: "autopia";
+    font-family: "typo1";
 }
 
+@media (max-width: 600px) {
+
+    .colorBlock {
+       width: 40vh;
+       height: 55vh;
+       scale: 0.9;
+   }
+   .video {
+       width: 200%;
+       height: auto;
+       left: -50%;
+       top: 5%;
+       overflow: hidden;
+       transform: rotate(90deg);
+   }
+    .price{ 
+        font-size: 4vw;
+    }
+    .number{ 
+        font-size: 4vw;
+    }
+    .size{ 
+        font-size: 4vw;
+    }
+}
 
 /* -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_ */
 /* -_-_-_-_-_-_-_-_-_-_-_-_-_-_BIJOUX_-_-_-_-_-_-_-_-_-_-_-_-_- */
@@ -448,8 +448,10 @@ font-family: "autopia";
   }
   
   .scrollbijoux {
+    display: flex;
+    flex-direction: row;
     height: 100vh;
-    width: 200vw;
+    width: 100vw;
   }
 
 .upbijoux{
@@ -460,21 +462,40 @@ font-family: "autopia";
 .carroussel{
     position: relative;
     height: 100vh;
-    top: 50vh;
     left: 0vw;
     margin-right: 0vw;
-    transform: translate(0%,-50%);
     z-index: 1;
 }
+@media (max-width: 600px) {
 
-.projetsname2{
+    .bijouxcontainer {
+        overflow-x: hidden;
+        overflow-y: scroll;
+      }
+
+    .scrollbijoux {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        width: 100vw;
+            overflow-x: hidden;
+            overflow-y: scroll;
+    
+      }
+      .carroussel{
+        width: 100vw;
+    }
+
+    }
+
+/* .projetsname2{
     position: fixed;
     bottom: 3vh;
     left: 50vw;
     transform: translate(-50%,-50%);
     text-align: center;
     color: var(--text2-color);
-font-family: "autopia";
+font-family: "typo1";
     opacity: 0;
 }
 
@@ -486,69 +507,32 @@ font-family: "autopia";
 #carrousself:hover ~ #f2 {  opacity: 1;  }
 #carrousselg:hover ~ #g2 {  opacity: 1;  }
 #carrousselh:hover ~ #h2 {  opacity: 1;  }
-#carrousseli:hover ~ #i2 {  opacity: 1;  }
+#carrousseli:hover ~ #i2 {  opacity: 1;  } */
 
-
-
-
-@media (max-width: 600px) {
-
-    /* *{
-        --main-color:  rgb(219, 6, 6);       
-    }
-     */
-     .colorBlock {
-        width: 40vh;
-        height: 55vh;
-        scale: 0.9;
-    }
-
-    .video {
-        width: 200%;
-        height: auto;
-        left: -50%;
-        top: 5%;
-        overflow: hidden;
-        transform: rotate(90deg);
-    }
-    p{
-        font-size: 4.5vw;
-    }
-    a{ 
-        font-size: 4vw;
-    }
-     #titre{
-        font-size: 8vw;
-    }
-
-    .price{ 
-        font-size: 4vw;
-    }
-    .number{ 
-        font-size: 4vw;
-    }
-    .size{ 
-        font-size: 4vw;
-    }
-
-
-}
 
 
 @font-face {
-    font-family:"autopia";
+    font-family:"typo1";
     src: url(font/Francesco-Italic-Trial.otf);
     font-style: normal;
     font-weight: 100;
 } 
 
-
 @font-face {
-    font-family:"autopia2";
+    font-family:"typo2";
     src: url(font/Francesco-Regular-Trial.otf);
     font-style: normal;
     font-weight: 100;
 }
+
+@font-face {
+    font-family:"typo3";
+    src: url(font/EBGaramond12-Regular.ttf);
+    font-style: normal;
+    font-weight: 100;
+} 
+
+
 
 
 
