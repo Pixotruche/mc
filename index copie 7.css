@@ -402,8 +402,8 @@ font-family: "typo2";
 @media (max-width: 600px) {
 
     .colorBlock {
-       width: 40vh;
-       height: 55vh;
+        width: 80vw;
+        height: 110vw;
        scale: 0.9;
    }
    .video {
