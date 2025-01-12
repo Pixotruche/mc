@@ -326,6 +326,18 @@ font-family: "typo2";
     #imgf{grid-row:2/3; grid-column: 4/5;  rotate: 20deg;   scale: 1; top: 8vw;}                               #miniaf{width: 8vw;}
     #imgg{grid-row:3/4; grid-column: 3/4;  rotate: 13deg;  scale: 1; top: 40%;  left: 100%;}                             #miniag{width: 7vw;}
     #imgh{grid-row:5/6; grid-column: 4/6;  rotate: 20deg;  scale: 1; top: 110%; left: 30%;}                    #miniah{width: 5vw;}
+
+
+
+
+    #imga:hover{  transform: scale(1); rotate: 20deg; transition: 200ms;  }
+#imgb:hover{  transform: scale(1); rotate: -7deg; transition: 200ms; }
+#imgc:hover{  transform: scale(1); rotate: -8deg; transition: 200ms; }
+#imgd:hover{  transform: scale(1); rotate: -12deg; transition: 200ms; }
+#imge:hover{  transform: scale(1); rotate: -7deg; transition: 200ms; }
+#imgf:hover{  transform: scale(1); rotate: 20deg; transition: 200ms; }
+#imgg:hover{  transform: scale(1); rotate: 13deg; transition: 200ms; }
+#imgh:hover{  transform: scale(1); rotate: 20deg; transition: 200ms; }
     }
 
 /* -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_ */
