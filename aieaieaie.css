@@ -382,7 +382,7 @@ align-items: center;
 
 
 #abis{  grid-column: span 2 / span 2;}
-    #imageabis{   width: 80%;  filter: drop-shadow(0px 0px 10px #919191);}
+    #imageabis{   width: 80%;  filter: drop-shadow(0px 0px 1vw rgba(0, 0, 0, 0.3));}
     #legendabis{
         position: absolute;
         bottom: -5%;
@@ -390,7 +390,7 @@ align-items: center;
   
 
 #a{  grid-column: span 2 / span 2;}
-    #imagea{   width: 80%; filter: drop-shadow(0px 0px 10px #919191);}
+    #imagea{   width: 80%; filter: drop-shadow(0px 0px 1vw rgba(0, 0, 0, 0.3));}
     #legenda{
         position: absolute;
         bottom: -5%;
@@ -398,27 +398,20 @@ align-items: center;
   
 
 #b{  grid-column: span 2 / span 2;}
-    #imageb{   width: 90%;  filter: drop-shadow(0px 0px 5px #919191);}
+    #imageb{   width: 90%;  filter: drop-shadow(0px 0px 1vw rgba(0, 0, 0, 0.3));}
     #legendb{
         position: absolute;
         bottom: -7%;
     }
    
 
-#c{  grid-column: span 2 / span 2; aspect-ratio: 10 / 7;}
-    #imagec{   width: 90%; position: absolute; left: 0%; top: 0%; transform: scaleX(-1); }    
-    #legendc{
-        position: absolute;
-        bottom: 4%;
-    }
+#c{  grid-column: span 2 / span 2; }
+    #imagec{   width: 70%; filter: drop-shadow(0px 0px 1vw rgba(0, 0, 0, 0.1)); }    
+
     
 
-#d{  grid-column: span 2 / span 2;  aspect-ratio: 10 / 6.5;}
-    #imaged{   width: 93%; position: absolute; right: 0px;  }
-    #legendd{
-        position: absolute;
-        bottom: 4%;
-    }
+#d{  grid-column: span 2 / span 2; }
+    #imaged{   width: 70%;filter: drop-shadow(0px 0px 1vw rgba(0, 0, 0, 0.1)); }
 
 
 
@@ -429,86 +422,37 @@ align-items: center;
 
 @media (max-width: 600px) {    
     #imagegrid{
-        position: relative;
         top: auto;
         margin-top: 0vh;
     width: 80vw;
     right: auto;
-    row-gap: 7%;
+    row-gap: 3%;
     }
-    .imagecontainer{
-        position: relative;
-        left: 50%;
-        transform: translate(-50%);
-        width: 100%;
-    display: flex;
-    top: -14%;
-    }
-
-
-    #abis{  grid-column: span 2 / span 2;  aspect-ratio: 10 / 12;}
-    #imageabis{   width: 90%; position: absolute; left: 50%; top: 8%;  transform: translate(-50%);  }
-    #legendabis{
-        position: absolute;
-        left: 50%;
-        transform: translate(-50%);
-        top: 0%;
-    }
-
-    #a{  grid-column: span 2 / span 2;  aspect-ratio: 10 / 6.5;  }
-    #imagea{   width: 90%; position: absolute; left: 50%; top: 12%;  transform: translate(-50%);  }
-    #legenda{
-        position: absolute;
-        left: 50%;
-        transform: translate(-50%);
-        top: 0%;
-    }
-  
-
-#b{  grid-column: span 2 / span 2; aspect-ratio: 10 / 9;}
-    #imageb{   width: 87%; position: absolute; left: 50%; top: 12%;  transform: translate(-50%);  }
     #legendb{
-        left: 50%;
-        transform: translate(-50%);
-        top: 0%;
+        position: absolute;
+        bottom: -10%;
     }
-   
 
-#c{  grid-column: span 2 / span 2; aspect-ratio: 10 / 7.5;}
-    #imagec{   width: 90%; position: absolute; left: 50%; top: 12%;  transform: translate(-50%);  }    
-    #legendc{
-        left: 50%;
-        transform: translate(-50%);
-        top: 0%;
-    }
-    
 
-#d{  grid-column: span 2 / span 2;  aspect-ratio: 10 / 6.5;}
-    #imaged{   width: 93%; position: absolute; left: 50%; top: 12%;  transform: translate(-50%);  }
-    #legendd{
-        left: 50%;
-        transform: translate(-50%);
-        top: 0%;
+    .imagecontainer{
+        width: 100%;
     }
+    #imageabis{   width: 100%;  }
+    #imagea{   width: 100%;  }
+    #imageb{   width: 100%;  }
+    #imagec{   width: 100%;  }
+    #imaged{   width: 100%; }
+
 }
+
+
+
 
 
 @media (min-width: 600px) and (max-width: 1000px) {
     #imagegrid{
-        margin-top:10vh;
+        margin-top:5vh;
         width: 90vh;
-    }
-    .imagecontainer{
-        display: flex;
-    }
-    #abis{  grid-column: span 2 / span 2;  aspect-ratio: 10 / 13; }
-    #imageabis{   width: 90%; position: absolute; top: 5%;  }
-    #legendabis{
-        position: absolute;
-        text-align: center;
-        left: 50%;
-        top: 0%;
-        transform: translate(-50%);
     }
 }
 

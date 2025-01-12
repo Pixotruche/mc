@@ -458,7 +458,7 @@ min-height: 4vh;
         position: absolute;
         left: 50%;
         transform: translate(-50%);
-        top: 0%;
+        bottom: -20%;
     }
 
     #a{  grid-column: span 2 / span 2;  aspect-ratio: 10 / 6.5;  }
@@ -467,7 +467,7 @@ min-height: 4vh;
         position: absolute;
         left: 50%;
         transform: translate(-50%);
-        top: 0%;
+        bottom: -33%;
     }
   
 
@@ -476,7 +476,7 @@ min-height: 4vh;
     #legendb{
         left: 50%;
         transform: translate(-50%);
-        top: 0%;
+        bottom: -15%;
     }
    
 
@@ -485,7 +485,7 @@ min-height: 4vh;
     #legendc{
         left: 50%;
         transform: translate(-50%);
-        top: 0%;
+        bottom: -25%;
     }
     
 
@@ -494,7 +494,7 @@ min-height: 4vh;
     #legendd{
         left: 50%;
         transform: translate(-50%);
-        top: 0%;
+        bottom: -35%;
     }
 }
 
