@@ -11,7 +11,6 @@
 }
 
 
-
 @font-face {
     font-family:"typo1";
     src: url(font/EBGaramond12-Italic.ttf);
@@ -22,6 +21,13 @@
 @font-face {
     font-family:"typo2";
     src: url(font/EBGaramond08-Regular.otf);
+    font-style: normal;
+    font-weight: 100;
+}
+
+@font-face {
+    font-family:"typo4";
+    src: url(font/EBGaramond12-Regular.ttf);
     font-style: normal;
     font-weight: 100;
 }
@@ -55,16 +61,6 @@
         p{
             font-size: 2.2vh;
         }
-        #titre{
-            font-size: 3.5vh;
-            font-family: "typo1";
-            z-index: 1;
-            white-space: nowrap;
-        }
-        #initiale{
-            font-size: 4.5vh;
-            font-family: "typo3";
-        }
         .top{
             position: fixed;
             top: 0;
@@ -74,13 +70,11 @@
             flex-direction:row;
             justify-content:space-between;
             z-index: 20;
-        }
-        
+        }   
         .boutontop{
             display: flex;
             align-items: center;
-        }
-        
+        }  
         #nom {
             position: absolute;
             top: 52%; left: 50%; 
@@ -89,19 +83,28 @@
             color:var(--text-color) ;
         
         }
-        
         #about{
             position: relative;
             left: 20px;
             color:var(--text-color);
             font-family: "typo2";
         }
-        
         #insta{
             position: relative;
             right: 20px;
             color:var(--text-color);
             font-family: "typo2";
+        }
+        
+        #titre{
+            font-size: 3.5vh;
+            font-family: "typo1";
+            z-index: 1;
+            white-space: nowrap;
+        }
+        #initiale{
+            font-size: 4.5vh;
+            font-family: "typo3";
         }
         
                 .pseudo{
@@ -231,9 +234,6 @@
         font-size: 9vh;
         font-family: "typo3";
         color:  var(--text-color);
-        margin: 20px;
-        margin-left: 8vh;
-        margin-right: 4vh;
         line-height: 75%;
     }
 
@@ -246,13 +246,21 @@
     }
 
     .text{
-        font-size: 1.8vh;
+        font-size: 1.9vh;
         color:  var(--text-color);
-        font-family: "typo2";
+        font-family: "typo4";
         margin: 8vh;
         margin-right: 0vh;
         margin-top: 0%;
         margin-bottom: 6vh;
+    }
+    .debut{
+        font-size: 2.8vh;
+        font-family: "typo3";
+        line-height: 0px;
+    }
+    .interligne{
+        line-height: 1.2vh;
     }
     .right{
         height: auto;
@@ -308,6 +316,16 @@
                 margin-top: 0%;
                 margin-bottom: 0%;
             }
+
+            .debut{
+                font-size: 4.8vw;
+                font-family: "typo3";
+                line-height: 0px;
+            }
+            .interligne{
+                line-height: 2vw;
+            }
+
             #colab{
                 font-size: 3.28vw;
             }
@@ -346,8 +364,6 @@
             
                 .titreprojet{
                     text-align: center;
-                    margin: 0%;
-                    margin-bottom: 5%;
                 }
             
                 .text{
@@ -358,7 +374,6 @@
                     margin-bottom: 0%;
                 }
             }
-
 /* -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_ */
 /* -_-_-_-_-_-_-_-_-_-_-_-_PROJET_-DIFFER-_-_-_-_-_-_-_-_-_-_-_ */
 /* -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_ */

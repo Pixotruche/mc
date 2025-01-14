@@ -257,18 +257,19 @@ transition: 0.7s;
     justify-content: center;
 }
 .miniature{
-    width: 7.8vh;
+    width: 6.8vh;
     height: auto;
 }
 
 #imga{grid-row:4/5; grid-column: 4/5;  rotate: 20deg; scale: 1.4;} 
 #imgb{grid-row:4/5; grid-column: 1/2;  rotate: -7deg;}
-#imgc{grid-row:4/5; grid-column: 2/3;  rotate: 4deg; top: 70%;}
-#imgd{grid-row:2/3; grid-column: 2/3;  rotate: -12deg; scale: 1.3; }
+#imgc{grid-row:4/5; grid-column: 2/3;  rotate: 4deg; top: 90%;}
+#imgd{grid-row:2/3; grid-column: 2/3;  rotate: -12deg; scale: 1.3; left: 90%;}
 #imge{grid-row:3/4; grid-column: 5/6;  rotate: -7deg;}
-#imgf{grid-row:2/3; grid-column: 4/5;  rotate: 5deg;scale: 1.7;}
-#imgg{grid-row:3/4; grid-column: 3/4;  rotate: 13deg;scale: 1.4;}
+#imgf{grid-row:2/3; grid-column: 4/5;  rotate: 5deg;scale: 1.3;}
+#imgg{grid-row:3/4; grid-column: 3/4;  rotate: 13deg;scale: 1.7;}
 #imgh{grid-row:5/6; grid-column: 5/6;  rotate: -7deg; top: -20%; left: 20%;}
+#imgi{grid-row:2/3; grid-column: 1/3;  rotate: -12deg; scale: 1.5; top: 70%; left: 40%;}
 
 #imga:hover{  transform: scale(3); rotate: 0deg; transition: 200ms;  }
 #imgb:hover{  transform: scale(3); rotate: 0deg; transition: 200ms; }
@@ -278,6 +279,8 @@ transition: 0.7s;
 #imgf:hover{  transform: scale(3); rotate: 0deg; transition: 200ms; }
 #imgg:hover{  transform: scale(3); rotate: 0deg; transition: 200ms; }
 #imgh:hover{  transform: scale(3); rotate: 0deg; transition: 200ms; }
+#imgi:hover{  transform: scale(3); rotate: 0deg; transition: 200ms; }
+
 
 
 .projetsname{
@@ -301,6 +304,7 @@ font-family: "typo2";
 #imgf:hover ~ #f {  opacity: 1;  }
 #imgg:hover ~ #g {  opacity: 1;  }
 #imgh:hover ~ #h {  opacity: 1;  }
+#imgi:hover ~ #i {  opacity: 1;  }
 
 
 @media (max-width: 600px) {
@@ -319,13 +323,14 @@ font-family: "typo2";
     }
 
     #imga{grid-row:4/5; grid-column: 3/4;  rotate: 20deg;  scale: 1; top: 110%;}                                          #miniaa{width: 6.5vw;}
-    #imgb{grid-row:5/5; grid-column: 2/3;  rotate: -7deg;  scale: 1;  left: 30%;}                                          #miniab{width: 5vw;}
-    #imgc{grid-row:3/5; grid-column: 1/3;  rotate: -8deg;   scale: 1; top: 50%; left: 60%;}                    #miniac{width: 5vw;}
-    #imgd{grid-row:2/3; grid-column: 2/3;  rotate: -12deg; scale: 1;}                                          #miniad{width: 7vw;}
+    #imgb{grid-row:5/5; grid-column: 2/3;  rotate: -7deg;  scale: 1;  left: 30%; top: 80%;}                                          #miniab{width: 5vw;}
+    #imgc{grid-row:3/5; grid-column: 1/3;  rotate: -8deg;   scale: 1; top: 60%; left: 60%;}                    #miniac{width: 5vw;}
+    #imgd{grid-row:1/3; grid-column: 3/4;  rotate: -12deg; scale: 1; left: 60%; top: 60%;}                                          #miniad{width: 6vw;}
     #imge{grid-row:4/5; grid-column: 4/6;  rotate: -7deg;  scale: 1;}                                          #miniae{width: 5vw;}
-    #imgf{grid-row:2/3; grid-column: 4/5;  rotate: 20deg;   scale: 1; top: 8vw;}                               #miniaf{width: 8vw;}
-    #imgg{grid-row:3/4; grid-column: 3/4;  rotate: 13deg;  scale: 1; top: 40%;  left: 100%;}                             #miniag{width: 7vw;}
-    #imgh{grid-row:5/6; grid-column: 4/6;  rotate: 20deg;  scale: 1; top: 110%; left: 30%;}                    #miniah{width: 5vw;}
+    #imgf{grid-row:2/3; grid-column: 4/5;  rotate: 20deg;   scale: 1; top: 60%; left: 90%;}                               #miniaf{width: 6vw;}
+    #imgg{grid-row:3/4; grid-column: 3/4;  rotate: 13deg;  scale: 1; top: 50%;  left: 100%;}                             #miniag{width: 7vw;}
+    #imgh{grid-row:5/6; grid-column: 4/6;  rotate: 20deg;  scale: 1; top: 110%; left: 30%;}                    #miniah{width: 4.5vw;}
+    #imgi{grid-row:1/3; grid-column: 2/3;  rotate: -20deg;  scale: 1; top: 90%; left: 30%;}                    #miniai{width: 5vw;}
 
 
 
@@ -338,6 +343,7 @@ font-family: "typo2";
 #imgf:hover{  transform: scale(1); rotate: 20deg; transition: 200ms; }
 #imgg:hover{  transform: scale(1); rotate: 13deg; transition: 200ms; }
 #imgh:hover{  transform: scale(1); rotate: 20deg; transition: 200ms; }
+#imgi:hover{  transform: scale(1); rotate: -20deg; transition: 200ms; }
     }
 
 /* -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_ */
