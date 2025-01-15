@@ -382,15 +382,16 @@ font-family: "typo2";
 }
 /* Flèches */
 .arrow {
-    font-size: 4vh;
+    font-size: 7vh;
+    font-family: "typo2";
     cursor: pointer;
-    color: #333;
+    color: var(--text-color);
 }
 
 /* Style pour chaque bloc de couleur */
 .colorBlock {
-    width: 60vh;
-    height: 45vh;
+    width: 70vh;
+    height: 56vh;
 }
 
 
@@ -401,7 +402,6 @@ font-family: "typo2";
     overflow: hidden;
 }
 
-/* Vidéo sans contrôle, qui s'adapte à la taille de l'écran */
 .video {
     position: relative;
     height: 100%;
@@ -454,19 +454,54 @@ font-family: "typo2";
 
 @media (max-width: 600px) {
 
+    .arrow {
+        font-size: 5vh;
+    }
+
     .colorBlock {
-       width: 80vw;
-       height: 110vw;
-       scale: 0.9;
+       width: 100vw;
+       height: 100vh;
    }
+   .video-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
    .video {
-       width: 200%;
-       height: auto;
-       left: -50%;
-       top: 5%;
-       overflow: hidden;
-       transform: rotate(90deg);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 105%;
+    min-height: 105%;
    }
+
+
+   .arrowbox{
+    height: 70vh;
+    width: 15vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#arrowbox-left{
+position: fixed;
+left: 0vw;
+z-index: 20;
+}
+#arrowbox-right{
+    position: fixed;
+    right: 0vw;
+    }
+.arrow {
+    font-size: 7vh;
+    font-family: "typo2";
+    cursor: pointer;
+    color: var(--main-color);
+}
+
     .price{ 
         font-size: 5vw;
     }

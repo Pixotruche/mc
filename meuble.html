@@ -76,24 +76,26 @@
   <div class="left">
     <div id="textcontainer">
       <p class="text">
-
         <span class="titreprojet">Avant l'Aube</span> <br>
 
         <span class="soustitreprojet">Un récit incarné de la création matérielle</span> <br><br>
 
-
-   
         Voici des objets qui chuchotent l’histoire de leur genèse, qui montrent tantôt timidement tantôt franchement, le geste façonnant, fascinant. 
-        <br><br>
-        Notre manière d’interagir avec le monde est de plus en plus distante. Nous manipulons notre environnement plus que nous l’habitons, à travers des systèmes complexes, insaisissables. Le fossé creusé entre production et consommation abîme notre rapport aux choses. Soignons-le en observant la technique qui a plus à raconter que sa seule efficacité. 
-        M. McLuhan dit «The medium is the message». L’objet devient le conteur de sa propre confection ; un artefact qui laisse transparaître son histoire ; montrant le faire concret, manuel par l’objet concret, palpable.
+     
+
+        <span id="hidden-text" style="display: none;">
+          <br><br>
+          Notre manière d’interagir avec le monde est de plus en plus distante. Nous manipulons notre environnement plus que nous l’habitons, à travers des systèmes complexes, insaisissables. Le fossé creusé entre production et consommation abîme notre rapport aux choses. Soignons-le en observant la technique qui a plus à raconter que sa seule efficacité.
+        </span>
+
+        <a href="#" id="toggle-text" onclick="toggleText(event)">...more</a>
+
         <br><br><br>
-
-        <span class="debut">Meuble à tiroirs</span> : chêne marqueté, argent 925, nâcre <br><br>
-
+        <span class="debut">Meuble à tiroirs</span> : chêne marquété, argent 925, nâcre <br><br>
         La technique du repoussage sur cuir me permet ici de venir détailler sur la lanière les étapes de fabrication de la boucle en bronze.
-        La technique de la fonte au sable y est illustrée, de l'alliage du cuivre et de l'étain au brossage de la boucle en passant par la fonte et la soudure.</p> 
-    </div>  
+        La technique de la fonte au sable y est illustrée, de l'alliage du cuivre et de l'étain au brossage de la boucle en passant par la fonte et la soudure.
+      </p>
+      </div>  
   </div>
 
   <div class="right">
@@ -130,6 +132,22 @@
 </div>
 
 <script>
+
+  // -_-_-_-_-_-_-_-_-_-_-_-_option text "plus"-_-_-_-_-_-_-_-_-_-_-_-_
+
+  function toggleText(event) {
+    event.preventDefault();
+    const hiddenText = document.getElementById('hidden-text');
+    const toggleLink = document.getElementById('toggle-text');
+    if (hiddenText.style.display === 'none') {
+      hiddenText.style.display = 'inline';
+      toggleLink.textContent = '<- reduce';
+    } else {
+      hiddenText.style.display = 'none';
+      toggleLink.textContent = '...more';
+    }
+  }
+  // -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
         
 document.getElementById('logoa').addEventListener('click', function() {

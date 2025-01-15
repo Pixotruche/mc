@@ -337,6 +337,9 @@
                 margin-top: 0%;
                 margin-bottom: 0%;
             }
+            #toggle-text{
+                font-size: 3.28vw;
+            }
             .soustitreprojet{
                 font-size: 4vw;
                 line-height: 150%;
@@ -402,7 +405,10 @@
                     margin-bottom: 0%;
                 }
             }
-
+            #toggle-text {
+                text-decoration: underline;
+                color: var(--text2-color);
+            }
 /* -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_ */
 /* -_-_-_-_-_-_-_-_-_-_-_-_PROJET_-DIFF-_-_-_-_-_-_-_-_-_-_-_ */
 /* -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_ */
