@@ -10,6 +10,42 @@
     
 }
 
+@font-face {
+    font-family:"typo1";
+    src: url(font/EBGaramond12-Italic.ttf);
+    font-style: normal;
+    font-weight: 100;
+} 
+
+@font-face {
+    font-family:"typo2";
+    src: url(font/EBGaramond08-Regular.otf);
+    font-style: normal;
+    font-weight: 100;
+}
+
+@font-face {
+    font-family:"typo3";
+    src: url(font/Cancellaresca\ Script\ Std\ Regular.otf);
+    font-style: normal;
+    font-weight: 100;
+} 
+
+@font-face {
+    font-family:"typo4";
+    src: url(font/EBGaramond12-Regular.ttf);
+    font-style: normal;
+    font-weight: 100;
+}
+
+@font-face {
+    font-family:"typo5";
+    src: url(font/EBGaramond08-Italic.otf);
+    font-style: normal;
+    font-weight: 100;
+}
+
+
         a, a:hover, a:visited, a {
             color: var(--text-color);
             text-decoration:none;
@@ -373,29 +409,146 @@ font-family: "typo2";
   }
 
 
-  .arrowbox{
+
+
+/* carousel */
+  .carousel {
+    position: relative;
+    width: 50vh;
     height: 70vh;
+    overflow: hidden;
+  }
+  .carousel-track {
+    display: flex;
+    height: 100%;
+    transition: transform 0.3s ease-in-out;
+  }
+  .carousel-slide {
+    position: relative;
+    min-width: 50vh;
+    height: 100%;
+    /* flex-shrink: 0; */
+    background-color: #f550f1;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-grow: 2;
-}
-/* Flèches */
-.arrow {
-    font-size: 7vh;
-    font-family: "typo2";
+    overflow: hidden;
+  }
+  .carousel-slide img {
+    border:none;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  video{
+    border:none;
+    display: block;
+    width: 100vw;
+    overflow: hidden;
+  }
+
+  img {
+height: 100vw;
+  }
+
+  /* Navigation arrows */
+  .carousel-arrow {
+    /* position: absolute;
+    top: 50%;
+    transform: translateY(-50%); */
+    background-color: rgba(0, 0, 0, 0);
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 10px;
     cursor: pointer;
-    color: var(--text-color);
-}
-
-/* Style pour chaque bloc de couleur */
-.colorBlock {
-    width: 70vh;
-    height: 56vh;
-}
+    z-index: 10;
+    font-size:3vh;
+  }
 
 
-.video-container {
+    /* Indicators */
+    .carousel-indicators {
+        display: flex;
+        justify-content: center;
+        gap: 5px;
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10;
+      }
+    
+      .carousel-indicator {
+        width: 10px;
+        height: 10px;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 50%;
+        cursor: pointer;
+      }
+    
+      .carousel-indicator.active {
+        background-color: var(--main-color);
+      }
+      
+    
+  @media (max-width: 600px) {
+    .carousel {
+        position: relative;
+        width: 100vw;
+        height: 130vw;
+        overflow: hidden;
+      }
+
+    .carousel-arrow {
+      display: none;
+    }
+    .carousel-indicators {
+        opacity: 0;
+        display: none;
+      }
+
+    .carousel {
+      overflow-x: scroll;
+      scroll-snap-type: x mandatory;
+      scrollbar-width: thin; /* Pour Firefox */
+-webkit-overflow-scrolling: auto;
+overflow-y: hidden; 
+      
+    }
+
+    .carousel-track {
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: thin; /* Pour Firefox */
+  -webkit-overflow-scrolling: auto;
+  overflow-y: hidden; 
+    }
+
+    .carousel-slide {
+        width: 100%;
+      scroll-snap-align: start;
+      flex-shrink: 0;
+      overflow-y: hidden; 
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .video-container {
     position: relative;
     width: 100%;
     height: 100%;
@@ -438,7 +591,7 @@ font-family: "typo2";
             font-family: "typo1";
             font-size: 2.4vh;
             margin-right: 5%;
-        }
+        } */
 
 
 .order {
@@ -454,15 +607,8 @@ font-family: "typo2";
 
 @media (max-width: 600px) {
 
-    .arrow {
-        font-size: 5vh;
-    }
 
-    .colorBlock {
-       width: 100vw;
-       height: 100vh;
-   }
-   .video-container {
+   /* .video-container {
     position: relative;
     width: 100vw;
     height: 100vh;
@@ -478,29 +624,7 @@ font-family: "typo2";
    }
 
 
-   .arrowbox{
-    height: 70vh;
-    width: 15vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-#arrowbox-left{
-position: fixed;
-left: 0vw;
-z-index: 20;
-}
-#arrowbox-right{
-    position: fixed;
-    right: 0vw;
-    }
-.arrow {
-    font-size: 7vh;
-    font-family: "typo2";
-    cursor: pointer;
-    color: var(--main-color);
-}
 
     .price{ 
         font-size: 5vw;
@@ -515,7 +639,7 @@ z-index: 20;
     .order {
         bottom: 2vh;
         font-size: 5vw;
-    }
+    } */
 }
 
 /* -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_ */
@@ -625,29 +749,6 @@ font-family: "typo1";
     font-weight: 100;
 }  */
 
-
-
-
-@font-face {
-    font-family:"typo1";
-    src: url(font/EBGaramond12-Italic.ttf);
-    font-style: normal;
-    font-weight: 100;
-} 
-
-@font-face {
-    font-family:"typo2";
-    src: url(font/EBGaramond08-Regular.otf);
-    font-style: normal;
-    font-weight: 100;
-}
-
-@font-face {
-    font-family:"typo3";
-    src: url(font/Cancellaresca\ Script\ Std\ Regular.otf);
-    font-style: normal;
-    font-weight: 100;
-} 
 
 
 
