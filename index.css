@@ -493,9 +493,13 @@ height: 100vw;
       
     
   @media (max-width: 600px) {
+
+
+
     .carousel {
         position: relative;
-        width: 100vw;
+        width: 100%;
+        max-width: 600px; 
         height: 130vw;
         overflow: hidden;
       }
@@ -518,11 +522,14 @@ overflow-y: hidden;
     }
 
     .carousel-track {
+        display: flex;
         overflow-x: scroll;
         scroll-snap-type: x mandatory;
         scrollbar-width: thin; /* Pour Firefox */
   -webkit-overflow-scrolling: auto;
   overflow-y: hidden; 
+  transition: transform 0.3s ease-in-out;
+  will-change: transform; 
     }
 
     .carousel-slide {
