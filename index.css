@@ -390,11 +390,10 @@ font-family: "typo2";
     position: absolute;
     top: 100vh;
     height: 100vh;
-    width: 100vw;
     z-index: 9;
     transition: 0.7s;
-    overflow-x: scroll;
-    overflow-y: hidden; 
+    width: 100%;
+    overflow: hidden;
     scrollbar-width: none; 
 
     display: flex;
@@ -495,7 +494,6 @@ height: 100vw;
   @media (max-width: 600px) {
 
 
-
     .carousel {
         position: relative;
         width: 100%;
@@ -503,7 +501,13 @@ height: 100vw;
         height: 130vw;
         overflow: hidden;
       }
-
+      .carousel-inner {
+        transition: transform 0.5s ease-in-out;
+     }
+      .carousel-item {
+        width: 100%; 
+        /* Vérifie que chaque élément du carousel occupe bien la largeur de l'écran */
+     }
     .carousel-arrow {
       display: none;
     }
