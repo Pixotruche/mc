@@ -158,30 +158,97 @@
 <div class="container shopcontainer" id="shopcontainer">
 
 
+<div class="shopgrid">
+
+<div class="espacetop"></div>
 
 
 
+<div class="carousel-containder">
 
-  <button class="carousel-arrow left">&#8592;</button>
-  <div class="carousel">
+  <button class="carousel-arrow left" data-carousel-id="0">←</button>
+  
+  <div class="carousel" id="carousel-1">
     <div class="carousel-track">
       <div class="carousel-slide">
-        <video class="video" autoplay muted loop playsinline webkit-playsinline>
-          <source src="video/1.mp4" type="video/mp4">
-          <p>Your browser does not support the video tag.</p>
-      </video>
+                        <video class="video" autoplay muted loop playsinline webkit-playsinline>
+                          <source src="video/1.mp4" type="video/mp4">
+                          <p>Your browser does not support the video tag.</p>
+                      </video>
       </div>
       <div class="carousel-slide"><img src="image2/carroussel/18.jpg" alt="Slide 2"></div>
       <div class="carousel-slide"><img src="image2/carroussel/15.jpg" alt="Slide 3"></div>
     </div>
-
     <div class="carousel-indicators">
       <div class="carousel-indicator active" data-index="0"></div>
       <div class="carousel-indicator" data-index="1"></div>
       <div class="carousel-indicator" data-index="2"></div>
     </div>
   </div>
-  <button class="carousel-arrow right">&#8594;</button>
+
+  <button class="carousel-arrow right" data-carousel-id="0">→</button>
+
+</div>
+
+
+
+<div class="carousel-containder">
+
+  <button class="carousel-arrow left" data-carousel-id="1">←</button>
+
+  <div class="carousel" id="carousel-2">
+    <div class="carousel-track">
+      <div class="carousel-slide">
+                        <video class="video" autoplay muted loop playsinline webkit-playsinline>
+                          <source src="video/2.mp4" type="video/mp4">
+                          <p>Your browser does not support the video tag.</p>
+                      </video>
+      </div>
+      <div class="carousel-slide"><img src="image2/carroussel/18.jpg" alt="Slide 2"></div>
+      <div class="carousel-slide"><img src="image2/carroussel/15.jpg" alt="Slide 3"></div>
+    </div>
+    <div class="carousel-indicators">
+      <div class="carousel-indicator active" data-index="0"></div>
+      <div class="carousel-indicator" data-index="1"></div>
+      <div class="carousel-indicator" data-index="2"></div>
+    </div>
+  </div>
+
+  <button class="carousel-arrow right" data-carousel-id="1">→</button>
+
+</div>
+
+<div class="carousel-containder">
+  
+  <button class="carousel-arrow left" data-carousel-id="2">←</button>
+
+  <div class="carousel" id="carousel-3">
+    <div class="carousel-track">
+      <div class="carousel-slide">
+                        <video class="video" autoplay muted loop playsinline webkit-playsinline>
+                          <source src="video/3.mp4" type="video/mp4">
+                          <p>Your browser does not support the video tag.</p>
+                      </video>
+      </div>
+      <div class="carousel-slide"><img src="image2/carroussel/18.jpg" alt="Slide 2"></div>
+      <div class="carousel-slide"><img src="image2/carroussel/15.jpg" alt="Slide 3"></div>
+    </div>
+    <div class="carousel-indicators">
+      <div class="carousel-indicator active" data-index="0"></div>
+      <div class="carousel-indicator" data-index="1"></div>
+      <div class="carousel-indicator" data-index="2"></div>
+    </div>
+  </div>
+
+  <button class="carousel-arrow right" data-carousel-id="2">→</button>
+
+</div>
+
+
+
+
+
+  
 
 
 
@@ -194,9 +261,9 @@
             </div>
         </div> -->
 
+</div>
 
-
-<a class="order" href="https://ig.me/m/empochait_humain" target="_blank">to order please contact @empochait_humain</a>
+<a class="order" href="https://ig.me/m/empochait_humain" target="_blank">to order please contact<br>@empochait_humain</a>
 
 </div>
 
@@ -464,96 +531,116 @@
       //video auto-_-_-_-_-_-_-_-_-_-_-_-_-_- -->
 
 
+            // Sélectionner toutes les vidéos
+            const videos = document.querySelectorAll('.video');
+
+            // Fonction qui sera appelée lorsque chaque vidéo entre ou sort de la vue
+            function handleIntersection(entries, observer) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Si la vidéo est visible à l'écran, on la joue
+                        entry.target.play();
+                    } else {
+                        // Si la vidéo n'est pas visible à l'écran, on la met en pause
+                        entry.target.pause();
+                    }
+                });
+            }
+
+            // Créer un observer pour détecter l'intersection de chaque vidéo
+            const observer = new IntersectionObserver(handleIntersection, {
+                threshold: 0.5 // 50% de la vidéo doit être visible avant de commencer à jouer
+            });
+
+            // Observer chaque vidéo
+            videos.forEach(video => {
+                observer.observe(video);
+            });
 
 
-      //carroussel-_-_-_-_-_-_-_-_-_-_-_-_-_- -->
+  //carousel-_-_-_-_-_-_-_-_-_-_-_-_-_- -->
 
 
 
+document.querySelectorAll('.carousel').forEach((carousel, index) => {
+  const track = carousel.querySelector('.carousel-track');
+  const slides = Array.from(track.children);
+  const nextButton = document.querySelector(`.carousel-arrow.right[data-carousel-id="${index}"]`);
+  const prevButton = document.querySelector(`.carousel-arrow.left[data-carousel-id="${index}"]`);
+  const indicators = carousel.querySelectorAll('.carousel-indicator');
 
+  let currentIndex = 0;
 
-
-
-
-      const track = document.querySelector('.carousel-track');
-    const slides = Array.from(track.children);
-    const nextButton = document.querySelector('.carousel-arrow.right');
-    const prevButton = document.querySelector('.carousel-arrow.left');
-    const indicators = document.querySelectorAll('.carousel-indicator');
-
-    let currentIndex = 0;
-
-    const updateCarousel = () => {
-      const slideWidth = slides[0].getBoundingClientRect().width;
-      track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
-      indicators.forEach((indicator, index) => {
-        indicator.classList.toggle('active', index === currentIndex);
-      });
-    };
-
+  const updateCarousel = () => {
+    const slideWidth = slides[0].getBoundingClientRect().width;
+    track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+    indicators.forEach((indicator, i) => {
+      indicator.classList.toggle('active', i === currentIndex);
+    });
+  };
+  if (nextButton) {
     nextButton.addEventListener('click', () => {
       currentIndex = (currentIndex + 1) % slides.length;
       updateCarousel();
     });
+  }
 
+  if (prevButton) {
     prevButton.addEventListener('click', () => {
       currentIndex = (currentIndex - 1 + slides.length) % slides.length;
       updateCarousel();
     });
-
-    // Swipe functionality for touch screens
-
-
-
-    let isSwiping = false;
-let startX = 0;
-
-track.addEventListener('touchstart', (e) => {
-  isSwiping = true;
-  startX = e.touches[0].clientX;
-});
-
-track.addEventListener('touchmove', (e) => {
-  if (!isSwiping) return;
-  const currentX = e.touches[0].clientX;
-  const deltaX = currentX - startX;
-
-  // Optionnel : déplace légèrement le track pour un effet visuel lors du swipe
-  track.style.transform = `translateX(calc(-${currentIndex * 100}% + ${deltaX}px))`;
-});
-
-track.addEventListener('touchend', (e) => {
-  isSwiping = false;
-  const endX = e.changedTouches[0].clientX;
-  const deltaX = endX - startX;
-
-  // Seuil minimal pour considérer un swipe valide
-  const swipeThreshold = 50;
-
-  if (deltaX < -swipeThreshold) {
-    currentIndex = (currentIndex + 1) % slides.length;
-  } else if (deltaX > swipeThreshold) {
-    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
   }
 
+  // Swipe functionality for touch screens
+  let isSwiping = false;
+  let startX = 0;
+
+  track.addEventListener('touchstart', (e) => {
+    isSwiping = true;
+    startX = e.touches[0].clientX;
+  });
+
+  track.addEventListener('touchmove', (e) => {
+    if (!isSwiping) return;
+    const currentX = e.touches[0].clientX;
+    const deltaX = currentX - startX;
+
+    track.style.transform = `translateX(calc(-${currentIndex * 100}% + ${deltaX}px))`;
+  });
+
+  track.addEventListener('touchend', (e) => {
+    isSwiping = false;
+    const endX = e.changedTouches[0].clientX;
+    const deltaX = endX - startX;
+
+    const swipeThreshold = 50;
+
+    if (deltaX < -swipeThreshold) {
+      currentIndex = (currentIndex + 1) % slides.length;
+    } else if (deltaX > swipeThreshold) {
+      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+    }
+
+    updateCarousel();
+  });
+
+  // Click on indicators
+  indicators.forEach(indicator => {
+    indicator.addEventListener('click', () => {
+      currentIndex = parseInt(indicator.getAttribute('data-index'));
+      updateCarousel();
+    });
+  });
+
+  // Adjust carousel on resize
+  window.addEventListener('resize', updateCarousel);
+
+  // Initial update
   updateCarousel();
-  
 });
 
 
-
-
-
-    // Click on indicators
-    indicators.forEach(indicator => {
-      indicator.addEventListener('click', () => {
-        currentIndex = parseInt(indicator.getAttribute('data-index'));
-        updateCarousel();
-      });
-    });
-
-    // Adjust carousel on resize
-    window.addEventListener('resize', updateCarousel);
 
 
 
