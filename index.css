@@ -515,7 +515,7 @@ height: 100vw;
       scrollbar-width: thin; /* Pour Firefox */
 -webkit-overflow-scrolling: auto;
 overflow-y: hidden; 
-      
+background-color: rgb(0, 255, 51);
     }
 
     .carousel-track {
@@ -527,6 +527,7 @@ overflow-y: hidden;
   overflow-y: hidden; 
   /* transition: transform 0.3s ease-in-out; */
   will-change: transform; 
+  background-color: blue;
     }
 
     .carousel-slide {
@@ -534,6 +535,7 @@ overflow-y: hidden;
       scroll-snap-align: start;
       flex-shrink: 0;
       overflow-y: hidden; 
+      background-color: rgb(255, 0, 255);
     }
 
 
@@ -547,6 +549,7 @@ overflow-y: hidden;
      }
      .shopcontainer {
         overflow: visible !important;
+        background-color: rgb(251, 255, 0);
      }
   }
 
