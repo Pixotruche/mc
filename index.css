@@ -59,6 +59,7 @@
 /* -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_ */
 /* -_-_-_-_-_-_-_-_-_-_-_-_-_-MENUS-_-_-_-_-_-_-_-_-_-_-_-_-_-_ */
 /* -_-_-_-_-_-_-_-_-_-_-_-_-_-COMMUN_-_-_-_-_-_-_-_-_-_-_-_-_-_ */
+/* -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_ */
 
 /* -_-_-_-_-_-_-_-_-_-_-_-_-_-TOP*/
         
@@ -211,6 +212,7 @@
 /* -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_ */
 /* -_-_-_-_-_-_-_-_-_-_-_-_-_-CHOIX_-_-_-_-_-_-_-_-_-_-_-_-_-_- */
 /* -_-_-_-_-_-_-_-_-_-_-_-_-_-DIFFERENT_-__-_-_-_-_-_-_-_-_-_-_ */
+/* -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_ */
 
 
         .top2{
@@ -416,8 +418,18 @@ font-family: "typo2";
   }
   .carousel-track {
     display: flex;
+    transform: translateX(0) !important;
+    overflow: hidden;
+
+
+    display: flex;
     height: 100%;
     /* transition: transform 0.3s ease-in-out; */
+        will-change: transform;  /* Prépare l'élément à être animé */
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0;
+        padding-right: 0;
   }
   .carousel-slide {
     position: relative;
@@ -549,7 +561,7 @@ background-color: rgb(0, 255, 51);
      }
      .shopcontainer {
         overflow: visible !important;
-        background-color: rgb(251, 255, 0);
+        background-color: rgb(0, 255, 213);
      }
   }
 
