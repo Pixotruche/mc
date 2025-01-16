@@ -502,21 +502,46 @@
     });
 
     // Swipe functionality for touch screens
-    let startX;
 
-    track.addEventListener('touchstart', (e) => {
-      startX = e.touches[0].clientX;
-    });
 
-    track.addEventListener('touchend', (e) => {
-      const endX = e.changedTouches[0].clientX;
-      if (endX < startX) {
-        currentIndex = (currentIndex + 1) % slides.length;
-      } else if (endX > startX) {
-        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-      }
-      updateCarousel();
-    });
+
+    let isSwiping = false;
+let startX = 0;
+
+track.addEventListener('touchstart', (e) => {
+  isSwiping = true;
+  startX = e.touches[0].clientX;
+});
+
+track.addEventListener('touchmove', (e) => {
+  if (!isSwiping) return;
+  const currentX = e.touches[0].clientX;
+  const deltaX = currentX - startX;
+
+  // Optionnel : déplace légèrement le track pour un effet visuel lors du swipe
+  track.style.transform = `translateX(calc(-${currentIndex * 100}% + ${deltaX}px))`;
+});
+
+track.addEventListener('touchend', (e) => {
+  isSwiping = false;
+  const endX = e.changedTouches[0].clientX;
+  const deltaX = endX - startX;
+
+  // Seuil minimal pour considérer un swipe valide
+  const swipeThreshold = 50;
+
+  if (deltaX < -swipeThreshold) {
+    currentIndex = (currentIndex + 1) % slides.length;
+  } else if (deltaX > swipeThreshold) {
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+  }
+
+  updateCarousel();
+});
+
+
+
+
 
     // Click on indicators
     indicators.forEach(indicator => {
