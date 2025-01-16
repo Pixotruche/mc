@@ -489,13 +489,6 @@ height: 100vw;
       
     
   @media (max-width: 600px) {
-    .carousel, .carousel-inner {
-        position: relative !important;
-        width: 100% !important;
-        overflow: visible !important;
-        transform: none !important;
-        transition: none !important;
-     }
 
     .carousel {
         position: relative;
@@ -542,6 +535,17 @@ overflow-y: hidden;
       flex-shrink: 0;
       overflow-y: hidden; 
     }
+
+
+
+    .carousel, .carousel-inner {
+        position: relative !important;
+        width: 100% !important;
+        overflow: visible !important;
+        transform: none !important;
+        transition: none !important;
+     }
+
   }
 
 
