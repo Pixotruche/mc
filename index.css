@@ -407,9 +407,6 @@ font-family: "typo2";
     transition: 0.7s;
   }
 
-
-
-
 /* carousel */
   .carousel {
     position: relative;
@@ -420,7 +417,7 @@ font-family: "typo2";
   .carousel-track {
     display: flex;
     height: 100%;
-    transition: transform 0.3s ease-in-out;
+    /* transition: transform 0.3s ease-in-out; */
   }
   .carousel-slide {
     position: relative;
@@ -492,7 +489,13 @@ height: 100vw;
       
     
   @media (max-width: 600px) {
-
+    .carousel, .carousel-inner {
+        position: relative !important;
+        width: 100% !important;
+        overflow: visible !important;
+        transform: none !important;
+        transition: none !important;
+     }
 
     .carousel {
         position: relative;
@@ -501,9 +504,6 @@ height: 100vw;
         height: 130vw;
         overflow: hidden;
       }
-      .carousel-inner {
-        transition: transform 0.5s ease-in-out;
-     }
       .carousel-item {
         width: 100%; 
         /* Vérifie que chaque élément du carousel occupe bien la largeur de l'écran */
@@ -532,7 +532,7 @@ overflow-y: hidden;
         scrollbar-width: thin; /* Pour Firefox */
   -webkit-overflow-scrolling: auto;
   overflow-y: hidden; 
-  transition: transform 0.3s ease-in-out;
+  /* transition: transform 0.3s ease-in-out; */
   will-change: transform; 
     }
 
