@@ -545,7 +545,9 @@ overflow-y: hidden;
         transform: none !important;
         transition: none !important;
      }
-
+     .shopcontainer {
+        overflow: visible !important;
+     }
   }
 
 
