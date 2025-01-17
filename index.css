@@ -396,7 +396,6 @@ font-family: "typo2";
 }
 
 
-
 .shopcontainer {
     position: absolute;
     top: 100vh;
@@ -404,22 +403,31 @@ font-family: "typo2";
     width: 100vw;
     z-index: 9;
     transition: 0.7s;
-    overflow-y: hidden; /* Désactive le défilement vertical */
-    scrollbar-width: none; /* Pour Firefox */
+    overflow: auto;
+     overflow-y: hidden;            
+    scrollbar-width: none;                      
     overflow-x: scroll;
-    -webkit-overflow-scrolling: touch; 
+    -webkit-overflow-scrolling: touch;  
+    /* POUR LANCIEN INVERSION DE SCROLL */
+    background-color: var(--main-color);
   }
 
   .shopcontainer::-webkit-scrollbar {
     display: none;  
   }
 
-.shopgrid
-{   display: flex;
+
+
+.scrollshop
+{   position: absolute;
+    display: flex;
     flex-direction: row;
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     gap: 20vh;
+    /* overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap; */
   }
 
 
@@ -497,30 +505,82 @@ height: 100vw;
     padding: 10px;
   }
 
+  .info{ 
+    position: absolute; 
+    width: 50%;
+    top: 77vh;
+    height: 7vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;   
+    gap: 15%;
+}
 
     /* Indicators */
     .carousel-indicators {
+        position: absolute;
+        top: -57.3vh;
+        left: 50%;
+        transform: translateX(-50%);
         display: flex;
         justify-content: center;
         gap: 5px;
-        position: absolute;
-        bottom: 10px;
-        left: 50%;
-        transform: translateX(-50%);
+
         z-index: 10;
       }
     
       .carousel-indicator {
-        width: 10px;
-        height: 10px;
-        background-color: rgba(0, 0, 0, 0.5);
+        width: 1.35vh;
+        height: 1.35vh;
+        background-color: rgba(0, 0, 0, 0.1);
         border-radius: 50%;
         cursor: pointer;
       }
     
       .carousel-indicator.active {
-        background-color: var(--main-color);
+        background-color: var(--text2-color);
       }
+
+
+            .price{         
+                font-family: "typo1";
+                font-size: 2.4vh;
+                /* margin-left: 5%;  */ 
+            }
+            .number{ 
+                /* position: absolute;
+                top: 50%; left: 50%; 
+                transform: translate(-50%, -50%); */
+                font-family: "typo1";
+                font-size: 2.4vh;
+            }
+            .size{ 
+                font-family: "typo1";
+                font-size: 2.4vh;
+                /* margin-right: 5%; */
+            }
+    
+       
+            .shopcontainer:hover + .order1 {  opacity: 1;  }
+            .order1:hover {  opacity: 1;  }
+    .order1 {
+        opacity: 0;
+        position: absolute;
+        bottom: 3vh;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 2.4vh;
+        text-align: center;
+        max-width: 50%;  /* Pour éviter que le texte soit trop large */
+         word-wrap: break-word; /* Permet au texte de passer à la ligne si nécessaire */
+        color: var(--text2-color);
+        font-family: "typo1";
+        z-index: 90 ;
+    }
+    .order2{display: none;}
+
+    
       
     
   @media (max-width: 600px) {
@@ -534,13 +594,16 @@ height: 100vw;
         align-items: center;
       }
 
-    .shopgrid
+    .scrollshop
 {  height: 100vh;
     width: 80vw;
 
     display: flex;
     flex-direction: column;
     row-gap: 20vw;
+    overflow-y: scroll; /* Désactive le défilement vertical */
+    scrollbar-width: none; /* Pour Firefox */
+    overflow-x: hidden;
   }
   .espacetop{
     height: 0vh;
@@ -584,69 +647,55 @@ height: 100vw;
           display: none;
         } */
 
-  }
+
+        .info {
+        
+            position: absolute;
+            top: 100vw;
+            height: 8vw;
+            width: 95%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: row;
+            z-index: 10;
+          }
+
+        .carousel-indicators {
+            position: relative;
+            top: 0px;
+            left: 0px;
+            transform: translateX(0px);
+    
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+            z-index: 10;
+          }
+          .carousel-indicator {
+            background-color: rgba(0, 0, 0, 0.3);
+
+                width: 2.2vw;
+                height: 2.2vw;
+ 
+          }
 
 
+    .price{  font-size: 5vw; }
+    .number{ font-size: 5vw;}
+    .size{  font-size: 5vw; }
 
-
-  .info{ 
-    position: absolute; 
-    width: 50%;
-    top: 77vh;
-    height: 7vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;   
-    gap: 15%;
-}
-
-        .price{         
-            font-family: "typo1";
-            font-size: 2.4vh;
-            /* margin-left: 5%;  */
-                
-        }
-        .number{ 
-            /* position: absolute;
-            top: 50%; left: 50%; 
-            transform: translate(-50%, -50%); */
-            font-family: "typo1";
-            font-size: 2.4vh;
-        }
-        .size{ 
-            font-family: "typo1";
-            font-size: 2.4vh;
-            /* margin-right: 5%; */
-        }
-
-
-.order {
-    position: absolute;
-    bottom: 3vh;
-    font-size: 2.4vh;
-    text-align: center;
-    max-width: 50%;  /* Pour éviter que le texte soit trop large */
-     word-wrap: break-word; /* Permet au texte de passer à la ligne si nécessaire */
-    color: var(--text2-color);
-    font-family: "typo1";
-}
-
-@media (max-width: 600px) {
-
-
-
-    .price{ 
-        font-size: 5vw;
-    }
-    .number{ 
-        font-size: 5vw;
-    }
-    .size{ 
-        font-size: 5vw;
-    }
-
-    .order {
+    .order1{display: none;}
+    .order2 {
+        display: block;
+        font-family: "typo1";
+        color: var(--text2-color);
+        word-wrap: unset;
+        max-width: 80%;
+        text-align: center;
+        position: relative;
+        left: 50%;
+        transform: translatex(-50%);
         bottom: 2vh;
         font-size: 5vw;
     } 
