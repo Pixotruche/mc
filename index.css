@@ -401,7 +401,7 @@ font-family: "typo2";
     top: 100vh;
     height: 100vh;
     width: 100vw;
-    z-index: 9;
+    z-index: 10;
     transition: 0.7s;
     overflow: auto;
      overflow-y: hidden;            
@@ -507,7 +507,7 @@ height: 100vw;
 
   .info{ 
     position: absolute; 
-    width: 50%;
+    width: 70%;
     top: 77vh;
     height: 7vh;
     display: flex;
@@ -519,10 +519,11 @@ height: 100vw;
 
     /* Indicators */
     .carousel-indicators {
-        position: absolute;
+        /* position: absolute;
         top: -57.3vh;
         left: 50%;
-        transform: translateX(-50%);
+        transform: translateX(-50%); */
+        position: relative;
         display: flex;
         justify-content: center;
         gap: 5px;
@@ -581,6 +582,11 @@ height: 100vw;
     .order2{display: none;}
 
     
+    .gapbot{
+        height: 10vh;
+        width: 20%;
+        flex-shrink: 0;
+    }
       
     
   @media (max-width: 600px) {
@@ -596,7 +602,7 @@ height: 100vw;
 
     .scrollshop
 {  height: 100vh;
-    width: 80vw;
+    width: 100vw;
 
     display: flex;
     flex-direction: column;
@@ -614,10 +620,11 @@ height: 100vw;
         scrollbar-width: thin; 
        -webkit-overflow-scrolling: auto;
         position: relative;
-        width: 100%;
+        width: 80%;
         max-width: 600px; 
         height: 100vw;
         overflow: hidden;
+        scrollbar-width: none;   
       }
 
     .carousel-track {
@@ -629,6 +636,7 @@ height: 100vw;
         scrollbar-width: thin; 
          overflow-y: hidden; 
          will-change: transform; 
+         scrollbar-width: none;    
     }
 
     .carousel-slide {
@@ -653,7 +661,7 @@ height: 100vw;
             position: absolute;
             top: 100vw;
             height: 8vw;
-            width: 95%;
+            width: 75%;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -710,7 +718,7 @@ height: 100vw;
     top: 100vh;
     height: 100vh;
     width: 100vw;
-    z-index: 9;
+    z-index: 5;
     transition: 0.7s;
     overflow-x: scroll;
     overflow-y: hidden; /* Désactive le défilement vertical */
