@@ -512,10 +512,21 @@ height: 100vw;
     height: 7vh;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;   
-    gap: 15%;
+    gap: 15%; font-family: "typo1";
 }
+.price, .size, .number{         
+    font-family: "typo1";
+    font-size: 2.4vh;
+}
+#info2{
+    top: 16.5vh;
+    justify-content: space-between;
+}
+.type, .materiaux{
+    font-family: "typo1";
+ }
 
     /* Indicators */
     .carousel-indicators {
@@ -543,24 +554,6 @@ height: 100vw;
         background-color: var(--text2-color);
       }
 
-
-            .price{         
-                font-family: "typo1";
-                font-size: 2.4vh;
-                /* margin-left: 5%;  */ 
-            }
-            .number{ 
-                /* position: absolute;
-                top: 50%; left: 50%; 
-                transform: translate(-50%, -50%); */
-                font-family: "typo1";
-                font-size: 2.4vh;
-            }
-            .size{ 
-                font-family: "typo1";
-                font-size: 2.4vh;
-                /* margin-right: 5%; */
-            }
     
        
             .shopcontainer:hover + .order1 {  opacity: 1;  }
@@ -606,7 +599,7 @@ height: 100vw;
 
     display: flex;
     flex-direction: column;
-    row-gap: 20vw;
+    row-gap: 30vw;
     overflow-y: scroll; /* Désactive le défilement vertical */
     scrollbar-width: none; /* Pour Firefox */
     overflow-x: hidden;
@@ -620,9 +613,9 @@ height: 100vw;
         scrollbar-width: thin; 
        -webkit-overflow-scrolling: auto;
         position: relative;
-        width: 80%;
+        width: 88%;
         max-width: 600px; 
-        height: 100vw;
+        height: 105vw;
         overflow: hidden;
         scrollbar-width: none;   
       }
@@ -659,15 +652,19 @@ height: 100vw;
         .info {
         
             position: absolute;
-            top: 100vw;
+            top: 111.5vw;
             height: 8vw;
-            width: 75%;
+            width: 82%;
             display: flex;
             align-items: center;
             justify-content: space-between;
             flex-direction: row;
             z-index: 10;
           }
+          #info2{
+            top: 105.5vw;
+            justify-content: space-between;
+        }
 
         .carousel-indicators {
             position: relative;
@@ -689,9 +686,9 @@ height: 100vw;
           }
 
 
-    .price{  font-size: 5vw; }
-    .number{ font-size: 5vw;}
-    .size{  font-size: 5vw; }
+    .price, .number, .size , .materiaux, .type {  font-size: 4.5vw; }
+
+ 
 
     .order1{display: none;}
     .order2 {
