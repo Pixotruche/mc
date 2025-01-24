@@ -282,7 +282,9 @@
     }
 
     @media (max-width: 600px) {
-
+        .right{
+            width: 100%;
+        }
         .leprojet{
             width: 100vw;
             display: flex;
@@ -313,12 +315,14 @@
             }
             .text{
                 font-size: 3.28vw;
-                text-align: center;
-                margin-left: 13%;
-                margin-right: 13%;
+                text-align: justify;
+                margin-left: 2%;
+                margin-right: 2%;
                 margin-top: 0%;
                 margin-bottom: 0%;
             }
+
+
 
             .debut{
                 font-size: 4.8vw;
@@ -400,7 +404,7 @@ margin-top: 20vh;
     width: 83%;
 min-height: 4vh;
 }
-#chapo{  display: none;}
+#chapo{  display: none; }
 
 
 #abis{  grid-column: span 2 / span 2;  aspect-ratio: 10 / 12;}
@@ -472,7 +476,7 @@ min-height: 4vh;
     top: -14%;
     }
 
-    #chapo{ display: flex; height: 28vw; grid-column: span 2 / span 1;  aspect-ratio: 10 / 12; justify-content: center; top: 0%; }
+    #chapo{ display: flex; height: 28vw; grid-column: span 2 / span 1;  aspect-ratio: 10 / 12; justify-content: center; top: 30%; }
     #imagechapo{   width: 100%;}
 
     #abis{  grid-column: span 2 / span 2;  aspect-ratio: 10 / 12;}

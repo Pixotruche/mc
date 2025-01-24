@@ -279,7 +279,9 @@
     }
 
     @media (max-width: 600px) {
-
+        .right{
+            width: 100%;
+        }
         .leprojet{
             width: 100vw;
             display: flex;
@@ -310,9 +312,9 @@
             }
             .text{
                 font-size: 3.28vw;
-                text-align: center;
-                margin-left: 13%;
-                margin-right: 13%;
+                text-align: justify;
+                margin-left: 2%;
+                margin-right: 2%;
                 margin-top: 0%;
                 margin-bottom: 0%;
             }
