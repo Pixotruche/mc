@@ -11,6 +11,13 @@
 }
 
 @font-face {
+    font-family:"arrow";
+    src: url(font/Source_Sans_3/static/SourceSans3-Regular.ttf);
+    font-style: normal;
+    font-weight: 100;
+} 
+
+@font-face {
     font-family:"typo1";
     src: url(font/EBGaramond12-Italic.ttf);
     font-style: normal;
@@ -492,7 +499,6 @@ font-family: "typo2";
 height: 100vw;
   }
 
-
   .carousel-arrow {
     position: relative;
     background-color: rgba(0, 0, 0, 0);
@@ -503,6 +509,9 @@ height: 100vw;
     font-size:3vh;
     pointer-events: all; 
     padding: 10px;
+
+    font-family: "arrow";
+   
   }
 
   .info{ 
@@ -514,7 +523,7 @@ height: 100vw;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;   
-    gap: 15%; font-family: "typo1";
+    font-family: "typo1";
 }
 .price, .size, .number{         
     font-family: "typo1";
@@ -599,13 +608,13 @@ height: 100vw;
 
     display: flex;
     flex-direction: column;
-    row-gap: 30vw;
+    row-gap: 0vw;
     overflow-y: scroll; /* Désactive le défilement vertical */
     scrollbar-width: none; /* Pour Firefox */
     overflow-x: hidden;
   }
   .espacetop{
-    height: 0vh;
+    display: none;
   }
 
     .carousel {
@@ -618,6 +627,7 @@ height: 100vw;
         height: 105vw;
         overflow: hidden;
         scrollbar-width: none;   
+        margin-bottom: 30vw;
       }
 
     .carousel-track {
@@ -692,17 +702,21 @@ height: 100vw;
 
     .order1{display: none;}
     .order2 {
+        margin-top: 27vw;
         display: block;
-        font-family: "typo1";
-        color: var(--text2-color);
         word-wrap: unset;
         max-width: 80%;
         text-align: center;
         position: relative;
         left: 50%;
         transform: translatex(-50%);
-        bottom: 2vh;
-        font-size: 5vw;
+        font-size: 4vw;
+        margin-bottom: 10vw;
+    } 
+    .order2text
+    {
+        font-family: "typo1";
+        font-size: 4vw;
     } 
 }
 
