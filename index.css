@@ -275,7 +275,7 @@
 .projectscontainer {
     position: absolute;
     top: 100vh;
-    height: 100vh;
+    height: 100%;
     width: 100vw;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
