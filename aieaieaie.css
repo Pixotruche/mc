@@ -396,7 +396,6 @@ margin-top: 15vh;
     left: 50%;
     transform: translate(-50%);
     width: 83%;
-min-height: 4vh;
 display: flex;
 justify-content: center;
 align-items: center;
