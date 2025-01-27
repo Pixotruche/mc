@@ -395,7 +395,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    aspect-ratio: 3/2;
 }
 
 
@@ -418,7 +417,7 @@
     width: 93%;  
     margin-bottom: 5vw;
 }
-#imagec,#imagef,#imagek{
+#imagec,#imagef,#imagei,#imagel{
     width: 87%;  
 }
 
