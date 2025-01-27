@@ -367,13 +367,13 @@ font-family: "typo2";
         height: auto;
     }
 
-    #imga{grid-row:4/5; grid-column: 3/4;  rotate: 20deg;  scale: 1; top: 110%;}                                          #miniaa{width: 6.5vw;}
-    #imgb{grid-row:5/5; grid-column: 2/3;  rotate: -7deg;  scale: 1;  left: 30%; top: 80%;}                                          #miniab{width: 5vw;}
+    #imga{grid-row:4/5; grid-column: 3/4;  rotate: 20deg;  scale: 1; top: 110%;}                               #miniaa{width: 6.5vw;}
+    #imgb{grid-row:5/5; grid-column: 2/3;  rotate: -7deg;  scale: 1;  left: 30%; top: 80%;}                    #miniab{width: 5vw;}
     #imgc{grid-row:3/5; grid-column: 1/3;  rotate: -8deg;   scale: 1; top: 60%; left: 60%;}                    #miniac{width: 5vw;}
-    #imgd{grid-row:1/3; grid-column: 3/4;  rotate: -12deg; scale: 1; left: 60%; top: 60%;}                                          #miniad{width: 6vw;}
+    #imgd{grid-row:1/3; grid-column: 3/4;  rotate: -12deg; scale: 1; left: 60%; top: 60%;}                     #miniad{width: 6vw;}
     #imge{grid-row:4/5; grid-column: 4/6;  rotate: -7deg;  scale: 1;}                                          #miniae{width: 5vw;}
-    #imgf{grid-row:2/3; grid-column: 4/5;  rotate: 20deg;   scale: 1; top: 60%; left: 90%;}                               #miniaf{width: 6vw;}
-    #imgg{grid-row:3/4; grid-column: 3/4;  rotate: 13deg;  scale: 1; top: 50%;  left: 100%;}                             #miniag{width: 7vw;}
+    #imgf{grid-row:2/3; grid-column: 4/5;  rotate: 20deg;   scale: 1; top: 60%; left: 90%;}                    #miniaf{width: 6vw;}
+    #imgg{grid-row:3/4; grid-column: 3/4;  rotate: 13deg;  scale: 1; top: 50%;  left: 100%;}                   #miniag{width: 7vw;}
     #imgh{grid-row:5/6; grid-column: 4/6;  rotate: 20deg;  scale: 1; top: 110%; left: 30%;}                    #miniah{width: 4.5vw;}
     #imgi{grid-row:1/3; grid-column: 2/3;  rotate: -20deg;  scale: 1; top: 90%; left: 30%;}                    #miniai{width: 5vw;}
 
@@ -781,49 +781,6 @@ height: 100vw;
 
     }
 
-/* .projetsname2{
-    position: fixed;
-    bottom: 3vh;
-    left: 50vw;
-    transform: translate(-50%,-50%);
-    text-align: center;
-    color: var(--text2-color);
-font-family: "typo1";
-    opacity: 0;
-}
-
-#carroussela:hover ~ #a2 {  opacity: 1;  }
-#carrousselb:hover ~ #b2 {  opacity: 1;  }
-#carrousselc:hover ~ #c2 {  opacity: 1;  }
-#carrousseld:hover ~ #d2 {  opacity: 1;  }
-#carroussele:hover ~ #e2 {  opacity: 1;  }
-#carrousself:hover ~ #f2 {  opacity: 1;  }
-#carrousselg:hover ~ #g2 {  opacity: 1;  }
-#carrousselh:hover ~ #h2 {  opacity: 1;  }
-#carrousseli:hover ~ #i2 {  opacity: 1;  } */
-
-
-
-/* @font-face {
-    font-family:"typo1";
-    src: url(font/Francesco-Italic-Trial.otf);
-    font-style: normal;
-    font-weight: 100;
-} 
-
-@font-face {
-    font-family:"typo2";
-    src: url(font/Francesco-Regular-Trial.otf);
-    font-style: normal;
-    font-weight: 100;
-}
-
-@font-face {
-    font-family:"typo3";
-    src: url(font/EBGaramond12-Regular.ttf);
-    font-style: normal;
-    font-weight: 100;
-}  */
 
 
 
